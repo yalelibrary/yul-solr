@@ -93,6 +93,7 @@
        <str name="qf">
         cjk^100001
         title_txt^100000
+        title_txt_cjk^100000
         subtitle_txt^50000
         title_addl_txt^5000
         subject_txt^750
@@ -104,6 +105,7 @@
         cjk^100001
         title_starts_with^1000000
         title_txt^1000000
+        title_txt_cjk^100000
         subtitle_txt^500000
         title_addl_txt^50000
         subject_txt^7500
@@ -158,6 +160,7 @@
        <str name="fl">
          id,
          cjk,
+         title_txt_cjk,
          clio_id_display,
          score,
          author_display,
@@ -307,6 +310,7 @@
       <!-- for user query terms in title text box -->
       <str name="qf_title">
         title_txt^50000
+        title_txt_cjk^50000
         subtitle_txt^25000
         title_addl_txt^10000
         title_t^5000
@@ -319,6 +323,7 @@
       </str>
       <str name="pf_title">
         title_txt^500000
+        title_txt_cjk^50000
         subtitle_txt^250000
         title_addl_txt^100000
         title_t^50000
@@ -361,6 +366,7 @@
       <str name="fl">
         id,
         cjk,
+        title_txt_cjk,
         score,
         author_display,
         author_vern_display,
