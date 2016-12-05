@@ -96,6 +96,7 @@
         title_txt_cjk^100000
         subtitle_txt^50000
         title_addl_txt^5000
+        title_addl_txt_cjk^5000
         subject_txt^750
         author_txt^25000
         author_addl_txt^25000
@@ -107,25 +108,41 @@
         title_txt^1000000
         title_txt_cjk^100000
         subtitle_txt^500000
+        subtitle_txt_cjk^500000
         title_addl_txt^50000
+        title_addl_txt_cjk^50000
         subject_txt^7500
+        subject_txt_cjk^7500
         author_txt^250000
+        author_txt_cjk^250000
         author_addl_txt^250000
+        author_addl_txt_cjk^250000
         text^10
        </str>
        <str name="author_qf">
         author_txt^200
         author_addl_txt^50
-       </str>
+        <!-- cjk -->
+        author_txt_cjk^200
+        author_addl_txt_cjk^50
+        
+      </str>
        <str name="author_pf">
          author_txt^2000
          author_addl_txt^500
+        <!-- cjk -->
+         author_txt_cjk^2000
+         author_addl_txt_cjk^500
        </str>
        <str name="title_qf">
          title_txt^50000
+         title_txt_cjk^50000
          subtitle_txt^25000
+         subtitle_txt_cjk^25000
          title_addl_txt^10000
+         title_addl_txt_cjk^10000
          title_series_txt^5000
+         title_series_txt_cjk^5000
        </str>
        <str name="title_pf">
          title_starts_with^1000000
@@ -133,6 +150,12 @@
          subtitle_txt^250000
          title_addl_txt^100000
          title_series_txt^50000
+         <!-- cjk -->
+         title_txt_cjk^500000
+         subtitle_txt_cjk^250000
+         title_addl_txt_cjk^100000
+         title_series_txt_cjk^50000
+       
        </str>
        <str name="title_start_qf">
         title_starts_with^10
@@ -142,10 +165,12 @@
        </str>
        <str name="subject_qf">
          subject_txt^125
+         subject_txt_cjk^125
        </str>
        <str name="subject_pf">
          subject_txt^1250
-       </str>
+         subject_txt_cjk^1250
+      </str>
        <str name="subject_local_qf">
          subject_local_txt^110
        </str>
@@ -159,8 +184,11 @@
        <!-- NOT using marc_display because it is large and will slow things down for search results -->
        <str name="fl">
          id,
+         <!-- cjk. Not sure what fields should be here -->
          cjk,
          title_txt_cjk,
+         subtitle_txt_cjk,
+         author_txt_cjk,
          clio_id_display,
          score,
          author_display,
@@ -299,12 +327,18 @@
         author_addl_txt^50
         author_t^20
         author_addl_t
+       <!-- cjk -->
+        author_txt_cjk^200
+        author_addl_txt_cjk^50
       </str>
       <str name="pf_author">
         author_txt^2000
         author_addl_txt^500
         author_t^200
         author_addl_t^10
+        <!-- cjk -->
+        author_txt_cjk^2000
+        author_addl_txt_cjk^500
       </str>
 
       <!-- for user query terms in title text box -->
@@ -312,20 +346,25 @@
         title_txt^50000
         title_txt_cjk^50000
         subtitle_txt^25000
+       subtitle_txt_cjk^25000
         title_addl_txt^10000
+       title_addl_txt_cjk^10000
         title_t^5000
         subtitle_t^2500
         title_addl_t^100
         title_added_entry_txt^50
         title_added_entry_t^10
         title_series_txt^5
+       title_series_txt_cjk^5
         title_series_t
       </str>
       <str name="pf_title">
         title_txt^500000
         title_txt_cjk^50000
         subtitle_txt^250000
+       subtitle_txt_cjk^250000
         title_addl_txt^100000
+       title_addl_txt_cjk^100000
         title_t^50000
         subtitle_t^25000
         title_addl_t^1000
@@ -333,12 +372,14 @@
         title_added_entry_t^100
         title_series_t^50
         title_series_txt^10
+       title_series_txt_cjk^10
       </str>
 
       <!-- for user query terms in subject text box -->
       <str name="qf_subject">
         subject_topic_txt^200
         subject_txt^125
+       subject_txt_cjk^125
         subject_local_txt^110
         subject_topic_facet^100
         subject_t^50
@@ -348,6 +389,7 @@
       <str name="pf_subject">
         subject_topic_txt^2000
         subject_txt^1250
+       subject_txt_cjk^1250
         subject_local_txt^1100
         subject_t^1000
         subject_topic_facet^500
