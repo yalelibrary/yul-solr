@@ -98,8 +98,11 @@
         title_addl_txt^5000
         title_addl_txt_cjk^5000
         subject_txt^750
+        subject_txt_cjk^750
         author_txt^25000
         author_addl_txt^25000
+        author_txt_cjk^25000
+        author_addl_txt_cjk^25000
         text
        </str>
        <str name="pf">
