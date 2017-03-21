@@ -20,6 +20,7 @@
    <!-- catchall field, built with getAllSearchableFields(),
         appended to via copyField further on in this schema  -->
    <field name="text" type="text_general" indexed="true" stored="false" multiValued="true"/>
+   <field name="text_copy_cjk" type="text_cjk" indexed="true" stored="false" multiValued="true"/>
 
    <field name="title_first_facet" type="string" indexed="true" stored="true" multiValued="true"/>
    <field name="language_facet" type="string" indexed="true" stored="true" multiValued="true" />
@@ -359,4 +360,3 @@
  </types>
 
 </schema>
-
