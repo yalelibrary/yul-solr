@@ -94,16 +94,21 @@
         cjk^100001
         title_txt^100000
         title_txt_cjk^100000
+        subject_txt_cjk^100000
         subtitle_txt^50000
+        subtitle_txt_cjk^50000
         title_addl_txt^5000
         title_addl_txt_cjk^5000
         subject_txt^750
-        subject_txt_cjk^750
         author_txt^25000
         author_addl_txt^25000
         author_txt_cjk^25000
         author_addl_txt_cjk^25000
+	title_series_txt_cjk^1000
+	pub_place_txt_cjk^1000
+	pub_name_txt_cjk^1000
         text
+        text_copy_cjk
        </str>
        <str name="pf">
         cjk^100001
@@ -121,6 +126,10 @@
         author_addl_txt^250000
         author_addl_txt_cjk^250000
         text^10
+        text_copy_cjk^10 
+        title_series_txt_cjk^1000
+        pub_place_txt_cjk^1000
+        pub_name_txt_cjk^1000
        </str>
        <str name="author_qf">
         author_txt^200
@@ -190,8 +199,15 @@
          <!-- cjk. Not sure what fields should be here -->
          cjk,
          title_txt_cjk,
+	 subject_txt_cjk,
          subtitle_txt_cjk,
          author_txt_cjk,
+         title_series_txt_cjk,
+         pub_place_txt_cjk,
+	 pub_name_txt_cjk,
+	 subject_txt_cjk,
+	 title_addl_txt_cjk,
+	 author_addl_txt_cjk,
          clio_id_display,
          score,
          author_display,
@@ -217,7 +233,8 @@
          subtitle_vern_display,
          url_fulltext_display,
          url_munged_display,
-         url_suppl_display
+         url_suppl_display,
+         text_copy_cjk
        </str>
 
        <str name="facet">true</str>
@@ -412,6 +429,7 @@
         id,
         cjk,
         title_txt_cjk,
+        subject_txt_cjk,
         score,
         author_display,
         author_vern_display,
@@ -575,4 +593,3 @@
   </searchComponent>
 
 </config>
-
