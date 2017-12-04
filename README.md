@@ -1,2 +1,2 @@
-# quicksearch-solr
-Different Solr configurations for Quicksearch
+# Configurations
+Different configurations for Quicksearch and FindIt
