@@ -50,6 +50,10 @@
     <dynamicField name="*_timv" type="text" stored="false" indexed="true" multiValued="true" termVectors="true" termPositions="true" termOffsets="true"/>
     <dynamicField name="*_tsiv" type="text" stored="true" indexed="true" multiValued="false" termVectors="true" termPositions="true" termOffsets="true"/>
     <dynamicField name="*_tsimv" type="text" stored="true" indexed="true" multiValued="true" termVectors="true" termPositions="true" termOffsets="true"/>
+    <dynamicField name="*_twim" type="text_wsplit" stored="false" indexed="true" multiValued="true"/>
+    <dynamicField name="*_twimg" type="text_wsplit_ngram" stored="false" indexed="true" multiValued="true"/>
+    <copyField source="*_twim" dest="*_twimg" />
+
     
     <!-- English text (_te...) -->
     <dynamicField name="*_tei" type="text_en" stored="false" indexed="true" multiValued="false"/>
@@ -383,7 +387,42 @@
         <filter class="solr.TrimFilterFactory"/>
       </analyzer>
     </fieldType>
-        
+       
+    <!-- A text field that only splits on whitespace for exact matching of words -->
+    <fieldType name="text_wsplit" class="solr.TextField" positionIncrementGap="100">
+      <analyzer type="index">
+        <!-- <tokenizer class="solr.KeywordTokenizerFactory"/> -->
+        <tokenizer class="solr.WhitespaceTokenizerFactory"/>
+        <filter class="solr.WordDelimiterFilterFactory"  splitOnCaseChange="0" preserveOriginal="1" />
+        <filter class="solr.LowerCaseFilterFactory"/>
+      </analyzer>
+
+      <analyzer type="query">
+        <!-- <tokenizer class="solr.KeywordTokenizerFactory"/> -->
+        <tokenizer class="solr.WhitespaceTokenizerFactory" />
+        <filter class="solr.WordDelimiterFilterFactory"  splitOnCaseChange="0" preserveOriginal="1"  />
+        <filter class="solr.LowerCaseFilterFactory"/>
+      </analyzer>
+    </fieldType>
+
+    <!-- A text field that only splits on whitespace for exact matching of words -->
+    <fieldType name="text_wsplit_ngram" class="solr.TextField" positionIncrementGap="100">
+      <analyzer type="index">
+        <!-- <tokenizer class="solr.KeywordTokenizerFactory"/> -->
+        <tokenizer class="solr.WhitespaceTokenizerFactory"/>
+        <filter class="solr.WordDelimiterFilterFactory"  splitOnCaseChange="0" />
+        <filter class="solr.LowerCaseFilterFactory"/>
+        <filter class="solr.EdgeNGramFilterFactory" minGramSize="1" maxGramSize="18" side="front"/>
+      </analyzer>
+
+      <analyzer type="query">
+        <!-- <tokenizer class="solr.KeywordTokenizerFactory"/> -->
+        <tokenizer class="solr.WhitespaceTokenizerFactory" />
+        <filter class="solr.WordDelimiterFilterFactory"  splitOnCaseChange="0"   />
+        <filter class="solr.LowerCaseFilterFactory"/>
+      </analyzer>
+    </fieldType>
+ 
     <!-- single token analyzed text, for sorting.  Punctuation is significant. -->
     <fieldtype name="alphaSort" class="solr.TextField" sortMissingLast="true" omitNorms="true">
       <analyzer>
