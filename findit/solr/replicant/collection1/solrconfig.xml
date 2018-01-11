@@ -7,8 +7,8 @@
   <abortOnConfigurationError>${solr.abortOnConfigurationError:true}</abortOnConfigurationError>
   
   <luceneMatchVersion>LUCENE_40</luceneMatchVersion>
-
-  <directoryFactory name="DirectoryFactory" class="${solr.directoryFactory:solr.StandardDirectoryFactory}"/>
+  
+  <directoryFactory name="DirectoryFactory" class="${solr.directoryFactory:solr.NRTCachingDirectoryFactory}"/>
 
   <!-- solr lib dirs -->
   <lib dir="../lib/contrib/analysis-extras/lib" />
@@ -421,13 +421,14 @@
       <str name="buildOnOptimize">true</str>
     </lst>
   </searchComponent>
-
- <!-- 8/13/13 - BR: Added replication stanze -->
-  <requestHandler name="/replication" class="solr.ReplicationHandler" >
-    <lst name="master">
-        <str name="replicateAfter">startup</str>
-        <str name="backupAfter">optimize</str>
-        <str name="confFiles">solrconfig_slave.xml:solrconfig.xml,x.xml,y.xml</str>
+<!-- 8/13/13 - BR: Added replication stanze -->
+<requestHandler name="/replication" class="solr.ReplicationHandler" >
+    <lst name="slave">
+        <str name="masterUrl">http://diego2.library.yale.edu:8083/solr/collection1</str>
+        <str name="pollInterval">00:30:20</str>
+        <str name="compression">internal</str>
+        <str name="httpConnTimeout">5000</str>
+        <str name="httpReadTimeout">10000</str>
     </lst>
 </requestHandler> 
   
