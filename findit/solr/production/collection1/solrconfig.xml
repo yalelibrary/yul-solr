@@ -3,9 +3,9 @@
   <!-- NOTE: various comments and unused configuration possibilities have been purged
      from this file.  Please refer to http://wiki.apache.org/solr/SolrConfigXml,
      as well as the default solrconfig file included with Solr -->
-  
+
   <abortOnConfigurationError>${solr.abortOnConfigurationError:true}</abortOnConfigurationError>
-  
+
   <luceneMatchVersion>LUCENE_40</luceneMatchVersion>
 
   <directoryFactory name="DirectoryFactory" class="${solr.directoryFactory:solr.StandardDirectoryFactory}"/>
@@ -13,7 +13,7 @@
   <!-- solr lib dirs -->
   <lib dir="../lib/contrib/analysis-extras/lib" />
   <lib dir="../lib/contrib/analysis-extras/lucene-libs" />
-  
+
   <dataDir>${solr.data.dir:}</dataDir>
 
   <requestHandler name="search" class="solr.SearchHandler" default="true">
@@ -44,7 +44,7 @@
         abstract_tsim
         access_restrictions_tsim
         accession_number_ssim
-        call_number_ssim
+        call_number_twim
         caption_ssim
         complex_hierarchy_tsim
         coordinates_ssim
@@ -89,6 +89,20 @@
         tribe_tsim
         variant_titles_tsim
         yale_collection_tsim
+        archive_video_tsim
+        creator_twim
+        loc_rec_num_twim
+        note_donor_tsim
+        note_funding_tsim
+        orbis_finding_aid_tsim
+        orbis_record_tsim
+        other_dates_tsim
+        related_links_twim
+        rights_tsim
+        subject_assoc_geo_tsim
+        subject_name_twim
+        video_url_tsim
+        yale_genre_tsim
        </str>
        <str name="pf">
           all_text_timv^10
@@ -127,7 +141,7 @@
         abstract_tsim
         access_restrictions_tsim
         accession_number_ssim
-        call_number_ssim
+        call_number_twim
         caption_ssim
         complex_hierarchy_tsim
         coordinates_ssim
@@ -172,6 +186,20 @@
         tribe_tsim
         variant_titles_tsim
         yale_collection_tsim
+        archive_video_tsim
+        creator_twim
+        loc_rec_num_twim
+        note_donor_tsim
+        note_funding_tsim
+        orbis_finding_aid_tsim
+        orbis_record_tsim
+        other_dates_tsim
+        related_links_twim
+        rights_tsim
+        subject_assoc_geo_tsim
+        subject_name_twim
+        video_url_tsim
+        yale_genre_tsim
        </str>
        <str name="fulltext_pf">
         fulltext_open_tsim^20
@@ -184,7 +212,7 @@
         abstract_tsim
         access_restrictions_tsim
         accession_number_ssim
-        call_number_ssim
+        call_number_twim
         caption_ssim
         complex_hierarchy_tsim
         coordinates_ssim
@@ -229,6 +257,20 @@
         tribe_tsim
         variant_titles_tsim
         yale_collection_tsim
+        archive_video_tsim
+        creator_twim
+        loc_rec_num_twim
+        note_donor_tsim
+        note_funding_tsim
+        orbis_finding_aid_tsim
+        orbis_record_tsim
+        other_dates_tsim
+        related_links_twim
+        rights_tsim
+        subject_assoc_geo_tsim
+        subject_name_twim
+        video_url_tsim
+        yale_genre_tsim
        </str>
 
        <str name="fulltext_open_qf">
@@ -241,7 +283,7 @@
         abstract_tsim
         access_restrictions_tsim
         accession_number_ssim
-        call_number_ssim
+        call_number_twim
         caption_ssim
         complex_hierarchy_tsim
         coordinates_ssim
@@ -286,6 +328,20 @@
         tribe_tsim
         variant_titles_tsim
         yale_collection_tsim
+        archive_video_tsim
+        creator_twim
+        loc_rec_num_twim
+        note_donor_tsim
+        note_funding_tsim
+        orbis_finding_aid_tsim
+        orbis_record_tsim
+        other_dates_tsim
+        related_links_twim
+        rights_tsim
+        subject_assoc_geo_tsim
+        subject_name_twim
+        video_url_tsim
+        yale_genre_tsim
        </str>
        <str name="fulltext_open_pf">
         fulltext_open_tsim^20
@@ -297,7 +353,7 @@
         abstract_tsim
         access_restrictions_tsim
         accession_number_ssim
-        call_number_ssim
+        call_number_twim
         caption_ssim
         complex_hierarchy_tsim
         coordinates_ssim
@@ -342,6 +398,20 @@
         tribe_tsim
         variant_titles_tsim
         yale_collection_tsim
+        archive_video_tsim
+        creator_twim
+        loc_rec_num_twim
+        note_donor_tsim
+        note_funding_tsim
+        orbis_finding_aid_tsim
+        orbis_record_tsim
+        other_dates_tsim
+        related_links_twim
+        rights_tsim
+        subject_assoc_geo_tsim
+        subject_name_twim
+        video_url_tsim
+        yale_genre_tsim
        </str>
 	   
        <str name="fl">
@@ -422,23 +492,23 @@
     </lst>
   </searchComponent>
 
- <!-- 8/13/13 - BR: Added replication stanze -->
+  <!-- 8/13/13 - BR: Added replication stanze -->
   <requestHandler name="/replication" class="solr.ReplicationHandler" >
     <lst name="master">
-        <str name="replicateAfter">startup</str>
-        <str name="backupAfter">optimize</str>
-        <str name="confFiles">solrconfig_slave.xml:solrconfig.xml,x.xml,y.xml</str>
+      <str name="replicateAfter">startup</str>
+      <str name="backupAfter">optimize</str>
+      <str name="confFiles">solrconfig_slave.xml:solrconfig.xml,x.xml,y.xml</str>
     </lst>
-</requestHandler> 
-  
+  </requestHandler>
+
   <requestDispatcher handleSelect="true" >
     <requestParsers enableRemoteStreaming="true" multipartUploadLimitInKB="2048" />
   </requestDispatcher>
-  
+
   <requestHandler name="/analysis/field" startup="lazy" class="solr.FieldAnalysisRequestHandler" />
   <requestHandler name="/update" class="solr.UpdateRequestHandler"  />
   <requestHandler name="/admin/" class="org.apache.solr.handler.admin.AdminHandlers" />
-  
+
   <requestHandler name="/admin/ping" class="solr.PingRequestHandler">
     <lst name="invariants">
       <str name="q">solrpingquery</str>
@@ -447,10 +517,10 @@
       <str name="echoParams">all</str>
     </lst>
   </requestHandler>
-  
-  <!-- config for the admin interface --> 
+
+  <!-- config for the admin interface -->
   <admin>
     <defaultQuery>search</defaultQuery>
   </admin>
-  
+
 </config>
