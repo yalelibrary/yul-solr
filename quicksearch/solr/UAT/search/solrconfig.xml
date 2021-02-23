@@ -20,13 +20,13 @@ class="${solr.directoryFactory:solr.NRTCachingDirectoryFactory}"/>
 </indexConfig>
 
 <!-- SLAVE REPLICATION FROM MASTER -->
-<requestHandler name="/replication" class="solr.ReplicationHandler" >
+  <requestHandler name="/replication" class="solr.ReplicationHandler">
     <lst name="slave">
-            <str name="masterUrl">http://yul-qs-app2.library.yale.internal:8083/solr/clio-hydra</str>
-            <str name="compression">internal</str>
-           <!-- <str name="pollInterval">23:01:20</str> -->
-            <str name="httpConnTimeout">5000</str>
-            <str name="httpReadTimeout">10000</str>
+      <str name="masterUrl">http://yul-qs-app2.library.yale.internal:8083/solr/clio-hydra</str>
+      <str name="pollInterval">00:01:00</str>
+      <str name="compression">internal</str>
+      <str name="httpConnTimeout">5000</str>
+      <str name="httpReadTimeout">10000</str>
     </lst>
 </requestHandler>
 <query>
