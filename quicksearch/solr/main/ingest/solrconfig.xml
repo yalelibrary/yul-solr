@@ -491,6 +491,7 @@ class="${solr.directoryFactory:solr.NRTCachingDirectoryFactory}"/>
       <str name="facet.field">subject_local_facet</str>
       <str name="facet.field">subject_geo_facet</str>
       <str name="facet.field">subject_topic_facet</str>
+      <str name="facet.field">location_facet</str>
       <!--<str name="facet.field">subject_form_facet</str>
       <str name="facet.field">database_hilcc_facet</str>
       <str name="facet.field">database_resource_type_facet</str>
