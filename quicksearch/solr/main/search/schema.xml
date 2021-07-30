@@ -2,13 +2,13 @@
 <schema name="spectrum" version="1.6">
 
  <fields>
-   <field name="id" type="string_punct_stop" indexed="true" stored="true" required="true" multiValued="false" /> 
+   <field name="id" type="string_punct_stop" indexed="true" stored="true" required="true" multiValued="false" />
 
    <!-- Uncommenting the following will create a "timestamp" field using
         a default value of "NOW" to indicate when each document was indexed.
 
         libserver7 directory: /usr/local/solr/clio-hydra/conf
-        log files: /usr/local/solr_tomcat/logs/catalina.out 
+        log files: /usr/local/solr_tomcat/logs/catalina.out
      -->
    <field name="timestamp" type="date" indexed="true" stored="true" default="NOW" multiValued="false"/>
 
@@ -17,7 +17,7 @@
    <!-- these display fields are NOT multi-valued -->
    <field name="marc_display" type="string" indexed="false" stored="true" multiValued="false"/>
 
-   <!-- catchall field, built with getAllSearchableFields(), 
+   <!-- catchall field, built with getAllSearchableFields(),
         appended to via copyField further on in this schema  -->
    <field name="text" type="text_general" indexed="true" stored="false" multiValued="true"/>
    <field name="text_copy_cjk" type="text_cjk" indexed="true" stored="false" multiValued="true"/>
@@ -73,14 +73,15 @@
    <dynamicField name="*_sort" type="alphaOnlySort" indexed="true" stored="false" multiValued="false" />
    <dynamicField name="*_unstem_search" type="text_general_unstem" indexed="true" stored="false" multiValued="true" />
    <dynamicField name="*_starts_with" type="text_starts_with" indexed="true" stored="false" multiValued="true" />
+   <dynamicField name="*_hierc" type="text_hierc" stored="true" indexed="true" multiValued="true"/>
 
 
    <!-- <dynamicField name="*spell" type="text_general" indexed="true" stored="false" multiValued="true" /> -->
-   
+
  </fields>
 
 
- <!-- Field to use to determine and enforce document uniqueness. 
+ <!-- Field to use to determine and enforce document uniqueness.
       Unless this field is marked with required="false", it will be a required field
    -->
  <uniqueKey>id</uniqueKey>
@@ -133,6 +134,16 @@
     <!-- The StrField type is not analyzed, but indexed/stored verbatim. -->
     <fieldType name="string" class="solr.StrField" sortMissingLast="true" />
 
+    <!-- Hierarchical field type with path tokenizer -->
+    <fieldType name="text_hierc" class="solr.TextField" positionIncrementGap="100" >
+      <analyzer type="index">
+        <tokenizer class="solr.PathHierarchyTokenizerFactory" delimiter=">"/>
+      </analyzer>
+      <analyzer type="query">
+        <tokenizer class="solr.KeywordTokenizerFactory"/>
+      </analyzer>
+    </fieldType>
+
     <!--
       Default numeric field types. For faster range queries, consider the tint/tfloat/tlong/tdouble types.
     -->
@@ -159,7 +170,7 @@
 
     <!-- The format for this date field is of the form 1995-12-31T23:59:59Z, and
          is a more restricted form of the canonical representation of dateTime
-         http://www.w3.org/TR/xmlschema-2/#dateTime    
+         http://www.w3.org/TR/xmlschema-2/#dateTime
          The trailing "Z" designates UTC time and is mandatory.
          Optional fractional seconds are allowed: 1995-12-31T23:59:59.999Z
          All other components are mandatory.
@@ -174,7 +185,7 @@
                NOW/DAY+6MONTHS+3DAYS
                   ... 6 months and 3 days in the future from the start of
                       the current day
-                      
+
          Consult the DateField javadocs for more information.
 
          Note: For faster range queries, consider the tdate type
@@ -316,13 +327,13 @@
         <filter class="solr.TrimFilterFactory" />
         <!-- The PatternReplaceFilter gives you the flexibility to use
              Java Regular expression to replace any sequence of characters
-             matching a pattern with an arbitrary replacement string, 
+             matching a pattern with an arbitrary replacement string,
              which may include back references to portions of the original
              string matched by the pattern.
-             
+
              See the Java Regular Expression documentation for more
              information on pattern and replacement string syntax.
-             
+
              http://java.sun.com/j2se/1.6.0/docs/api/java/util/regex/package-summary.html
           -->
         <filter class="solr.PatternReplaceFilterFactory"
@@ -330,7 +341,7 @@
         />
       </analyzer>
     </fieldType>
-    
+
 
    <!-- string_punct_stop copied from Stanford Searchworks -->
    <!-- single token with punctuation terms removed so dismax doesn't look for punctuation terms in these fields -->
@@ -397,6 +408,5 @@
 </fieldType>
 
  </types>
-  
-</schema>
 
+</schema>
