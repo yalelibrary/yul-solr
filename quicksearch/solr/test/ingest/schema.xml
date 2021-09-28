@@ -113,7 +113,7 @@
 
    <!-- sort fields -->
    <copyField source="pub_date_txt" dest="pub_date_sort"/>
-	
+
    <!-- CJK fields -->
 
    <copyField source="text" dest="text_copy_cjk"/>
@@ -196,7 +196,7 @@
         <filter class="solr.StopFilterFactory"
                 ignoreCase="true"
                 words="stopwords.txt"
-                enablePositionIncrements="true" />
+                 />
         <filter class="solr.WordDelimiterFilterFactory"
                 splitOnCaseChange="1" generateWordParts="1" generateNumberParts="1"
                 catenateWords="1" catenateNumbers="1" catenateAll="1" />
@@ -211,7 +211,7 @@
         <filter class="solr.StopFilterFactory"
                 ignoreCase="true"
                 words="stopwords.txt"
-                enablePositionIncrements="true" />
+        />
         <filter class="solr.WordDelimiterFilterFactory"
                 splitOnCaseChange="1" generateWordParts="1" generateNumberParts="1"
                 catenateWords="0" catenateNumbers="0" catenateAll="0" />
@@ -285,7 +285,7 @@
     <fieldType name="text_general_rev" class="solr.TextField" positionIncrementGap="100">
       <analyzer type="index">
         <tokenizer class="solr.StandardTokenizerFactory"/>
-        <filter class="solr.StopFilterFactory" ignoreCase="true" words="stopwords.txt" enablePositionIncrements="true" />
+        <filter class="solr.StopFilterFactory" ignoreCase="true" words="stopwords.txt"/>
         <filter class="solr.LowerCaseFilterFactory"/>
         <filter class="solr.ReversedWildcardFilterFactory" withOriginal="true"
            maxPosAsterisk="3" maxPosQuestion="2" maxFractionAsterisk="0.33"/>
@@ -293,7 +293,7 @@
       <analyzer type="query">
         <tokenizer class="solr.StandardTokenizerFactory"/>
         <filter class="solr.SynonymFilterFactory" synonyms="synonyms.txt" ignoreCase="true" expand="true"/>
-        <filter class="solr.StopFilterFactory" ignoreCase="true" words="stopwords.txt" enablePositionIncrements="true" />
+        <filter class="solr.StopFilterFactory" ignoreCase="true" words="stopwords.txt"/>
         <filter class="solr.LowerCaseFilterFactory"/>
       </analyzer>
     </fieldType>
@@ -346,23 +346,23 @@
        <tokenizer class="solr.KeywordTokenizerFactory" />
        <filter class="solr.ICUNormalizer2FilterFactory" name="nfkc" mode="compose" />
        <!-- removing punctuation for Lucene query parser issues -->
-       <filter class="solr.StopFilterFactory" ignoreCase="true" words="stopwords.txt" enablePositionIncrements="true" />
+       <filter class="solr.StopFilterFactory" ignoreCase="true" words="stopwords.txt"/>
      </analyzer>
    </fieldType>
-	  
-	  <!--
-  <fieldType name="text_cjk" class="solr.TextField" positionIncrementGap="10000" autoGeneratePhraseQueries="false">
-   <analyzer>
-    <tokenizer class="solr.ICUTokenizerFactory" />
-    <filter class="solr.CJKWidthFilterFactory"/>
-    <filter class="solr.ICUTransformFilterFactory" id="Traditional-Simplified"/>
-    <filter class="solr.ICUTransformFilterFactory" id="Katakana-Hiragana"/>
-    <filter class="solr.ICUFoldingFilterFactory"/>
-    <filter class="solr.CJKBigramFilterFactory" han="true" hiragana="true" katakana="true" hangul="true" outputUnigrams="true" />
-  </analyzer>
+
+    <!--
+<fieldType name="text_cjk" class="solr.TextField" positionIncrementGap="10000" autoGeneratePhraseQueries="false">
+ <analyzer>
+  <tokenizer class="solr.ICUTokenizerFactory" />
+  <filter class="solr.CJKWidthFilterFactory"/>
+  <filter class="solr.ICUTransformFilterFactory" id="Traditional-Simplified"/>
+  <filter class="solr.ICUTransformFilterFactory" id="Katakana-Hiragana"/>
+  <filter class="solr.ICUFoldingFilterFactory"/>
+  <filter class="solr.CJKBigramFilterFactory" han="true" hiragana="true" katakana="true" hangul="true" outputUnigrams="true" />
+</analyzer>
 </fieldType> -->
-	 
-<fieldType name="text_cjki_old" class="solr.TextField" positionIncrementGap="10000" autoGeneratePhraseQueries="false">
+
+    <fieldType name="text_cjki_old" class="solr.TextField" positionIncrementGap="10000" autoGeneratePhraseQueries="false">
   <analyzer>
     <tokenizer class="solr.ICUTokenizerFactory" />
     <filter class="solr.CJKWidthFilterFactory"/>
@@ -386,13 +386,14 @@
       <filter class="solr.CJKBigramFilterFactory" han="true" hiragana="true" katakana="true" hangul="true" outputUnigrams="true" />
   </analyzer>
   <analyzer type="query">
-     <tokenizer class="solr.ICUTokenizerFactory"  />
-     <filter class="solr.CJKWidthFilterFactory"/> 
-     <filter class="edu.stanford.lucene.analysis.CJKFoldingFilterFactory"/> 
-     <filter class="solr.ICUTransformFilterFactory" id="Traditional-Simplified"/> 
-     <filter class="solr.ICUTransformFilterFactory" id="Katakana-Hiragana"/> 
-     <filter class="solr.ICUFoldingFilterFactory"/> 
-     <filter class="solr.CJKBigramFilterFactory" han="true" hiragana="true" katakana="true" hangul="true" outputUnigrams="true" /> 
+    <tokenizer class="solr.ICUTokenizerFactory"/>
+    <filter class="solr.CJKWidthFilterFactory"/>
+    <filter class="edu.stanford.lucene.analysis.CJKFoldingFilterFactory"/>
+    <filter class="solr.ICUTransformFilterFactory" id="Traditional-Simplified"/>
+    <filter class="solr.ICUTransformFilterFactory" id="Katakana-Hiragana"/>
+    <filter class="solr.ICUFoldingFilterFactory"/>
+    <filter class="solr.CJKBigramFilterFactory" han="true" hiragana="true" katakana="true" hangul="true"
+            outputUnigrams="false"/>
   </analyzer>
 </fieldType>
 
