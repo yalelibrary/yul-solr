@@ -504,6 +504,8 @@
                 pub_name_txt_cjk^1000
                 text
                 text_copy_cjk
+                container_txt
+                ancestor_display_strings_txt
             </str>
             <str name="pf">
                 cjk^100001
@@ -525,6 +527,8 @@
                 title_series_txt_cjk^1000
                 pub_place_txt_cjk^1000
                 pub_name_txt_cjk^1000
+                container_txt^10
+                ancestor_display_strings_txt^10
             </str>
             <str name="author_qf">
                 author_txt^200
