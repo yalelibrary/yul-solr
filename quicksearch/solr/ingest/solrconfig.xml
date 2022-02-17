@@ -2,9 +2,9 @@
 <config>
   <luceneMatchVersion>LUCENE_40</luceneMatchVersion>
 
-<!-- 1/14/2015 - BR - Modified to include NRTCachingDirectoryFactory, caching, and prewarming --> 
+<!-- 1/14/2015 - BR - Modified to include NRTCachingDirectoryFactory, caching, and prewarming -->
 
-<directoryFactory name="DirectoryFactory" 
+<directoryFactory name="DirectoryFactory"
 
 class="${solr.directoryFactory:solr.NRTCachingDirectoryFactory}"/>
 
@@ -19,9 +19,9 @@ class="${solr.directoryFactory:solr.NRTCachingDirectoryFactory}"/>
     <filterCache class="solr.FastLRUCache" size="10000" initialSize="5000" autowarmCount="100"/>
 
     <queryResultCache class="solr.LRUCache" size="1000" initialSize="100" autowarmCount="5"/>
-   
+
     <documentCache class="solr.LRUCache" size="10000" initialSize="5000" autowarmCount="0"/>
-    
+
     <fieldValueCache class="solr.FastLRUCache" size="512" autowarmCount="128" showItems="32" />
 
     <enableLazyFieldLoading>true</enableLazyFieldLoading>
@@ -91,16 +91,16 @@ class="${solr.directoryFactory:solr.NRTCachingDirectoryFactory}"/>
 </requestHandler>
 
   <requestDispatcher handleSelect="true" >
-    <requestParsers enableRemoteStreaming="true" 
+    <requestParsers enableRemoteStreaming="true"
 	multipartUploadLimitInKB="2048000" />
     <httpCaching never304="true" />
   </requestDispatcher>
-  
+
   <requestHandler name="standard" class="solr.StandardRequestHandler" default="true" />
   <requestHandler name="/analysis/field" startup="lazy" class="solr.FieldAnalysisRequestHandler" />
   <requestHandler name="/update" class="solr.UpdateRequestHandler"  />
   <requestHandler name="/admin/" class="org.apache.solr.handler.admin.AdminHandlers" />
-     
+
   <requestHandler name="/admin/ping" class="solr.PingRequestHandler">
     <lst name="invariants">
       <str name="q">solrpingquery</str>
@@ -109,8 +109,8 @@ class="${solr.directoryFactory:solr.NRTCachingDirectoryFactory}"/>
       <str name="echoParams">all</str>
     </lst>
   </requestHandler>
-   
-  <!-- config for the admin interface --> 
+
+  <!-- config for the admin interface -->
   <admin>
     <defaultQuery>solr</defaultQuery>
   </admin>
@@ -176,38 +176,42 @@ class="${solr.directoryFactory:solr.NRTCachingDirectoryFactory}"/>
        <str name="subject_pf">
          subject_txt^1250
        </str>
-       
+
        <int name="ps">3</int>
        <float name="tie">0.01</float>
 
        <!-- NOT using marc_display because it is large and will slow things down for search results -->
        <str name="fl">
-         id, 
-         clio_id_display, 
+         id,
+         clio_id_display,
          score,
          author_display,
          author_vern_display,
          author_facet,
-         format, 
-         isbn_display, 
-         language_facet, 
-         database_restrictions_display, 
-         material_type_display, 
-         lc_callnum_display, 
-         full_publisher_display, 
-         location_call_number_id_display, 
-         published_display, 
-         published_vern_display, 
-         title_display, 
-         title_vern_display, 
-         subject_topic_facet, 
-         subject_geo_facet, 
-         subject_era_facet, 
-         subject_local_facet, 
-         subtitle_display, 
-         subtitle_vern_display, 
-         url_fulltext_display, 
-         url_munged_display, 
+         collection_creator_ss,
+         container_display,
+         format,
+         found_in_labels_ss,
+         found_in_uris_ss,
+         isbn_display,
+         language_facet,
+         database_restrictions_display,
+         material_type_display,
+         lc_callnum_display,
+         full_publisher_display,
+         location_call_number_id_display,
+         published_display,
+         published_vern_display,
+         title_display,
+         title_vern_display,
+         subject_topic_facet,
+         subject_geo_facet,
+         subject_era_facet,
+         subject_local_facet,
+         subtitle_display,
+         subtitle_vern_display,
+         url_fulltext_display,
+         url_munged_display,
          url_suppl_display
        </str>
 
@@ -223,7 +227,7 @@ class="${solr.directoryFactory:solr.NRTCachingDirectoryFactory}"/>
        <str name="facet.field">subject_local_facet</str>
        <str name="facet.field">subject_geo_facet</str>
        <str name="facet.field">subject_topic_facet</str>
-       
+
        <str name="spellcheck">true</str>
        <str name="spellcheck.dictionary">default</str>
        <str name="spellcheck.onlyMorePopular">true</str>
@@ -235,7 +239,7 @@ class="${solr.directoryFactory:solr.NRTCachingDirectoryFactory}"/>
     <arr name="last-components">
       <str>spellcheck</str>
     </arr>
-      
+
   </requestHandler>
 
   <requestHandler name="document" class="solr.SearchHandler" >
@@ -252,16 +256,16 @@ class="${solr.directoryFactory:solr.NRTCachingDirectoryFactory}"/>
     <lst name="defaults">
       <str name="defType">lucene</str>
       <str name="echoParams">explicit</str>
-      <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>   
-      <str name="df">text</str> 
-      <str name="q.op">AND</str> 
+      <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
+      <str name="df">text</str>
+      <str name="q.op">AND</str>
       <str name="qs">1</str>
 
       <!-- used for dismax query parser -->
-      <str name="mm">1</str> 
-      <str name="ps">3</str> 
+      <str name="mm">1</str>
+      <str name="ps">3</str>
       <float name="tie">0.01</float>
-      
+
       <!-- for user query terms in author text box -->
       <str name="qf_author">
         author_txt^200
@@ -275,7 +279,7 @@ class="${solr.directoryFactory:solr.NRTCachingDirectoryFactory}"/>
         author_t^200
         author_addl_t^10
       </str>
-      
+
       <!-- for user query terms in title text box -->
       <str name="qf_title">
         title_txt^50000
@@ -301,7 +305,7 @@ class="${solr.directoryFactory:solr.NRTCachingDirectoryFactory}"/>
         title_series_t^50
         title_series_txt^10
       </str>
-      
+
       <!-- for user query terms in subject text box -->
       <str name="qf_subject">
         subject_topic_txt^200
@@ -319,27 +323,27 @@ class="${solr.directoryFactory:solr.NRTCachingDirectoryFactory}"/>
         subject_addl_txt^100
         subject_addl_t^10
       </str>
-      
+
       <!-- for user query terms in number text box -->
       <str name="qf_number">isbn_t</str>
-      
+
       <!-- for user query terms in keyword text box -->
       <str name="qf_keyword">text</str>
       <str name="pf_keyword">text^10</str>
-      
+
       <!-- NOT using marc_display because it is large and will slow things down for search results -->
       <str name="fl">
-        id, 
+        id,
         score,
         author_display,
-        author_vern_display, 
-        clio_id_display, 
-        format, 
-        isbn_t, 
-        language_facet, 
+        author_vern_display,
+        clio_id_display,
+        format,
+        isbn_t,
+        language_facet,
         lc_callnum_display,
         location_call_number_id_display,
-        material_type_display, 
+        material_type_display,
         pub_date_facet,
         acq_dt,
         title_display,
@@ -358,7 +362,7 @@ class="${solr.directoryFactory:solr.NRTCachingDirectoryFactory}"/>
         database_hilcc_facet,
         database_resource_type_facet,
         location_facet,
-        full_publisher_display, 
+        full_publisher_display,
         location_holdings_id_display,
         location_display,
         location_call_number_id_display,
@@ -367,7 +371,7 @@ class="${solr.directoryFactory:solr.NRTCachingDirectoryFactory}"/>
         url_suppl_display
         source_display
       </str>
-      
+
       <str name="facet">true</str>
       <str name="facet.mincount">1</str>
       <str name="facet.limit">10</str>
@@ -392,8 +396,8 @@ class="${solr.directoryFactory:solr.NRTCachingDirectoryFactory}"/>
       <str name="facet.field">location_facet</str>
       <str name="f.location_facet.facet.method">enum</str>
       <str name="facet.field">author_facet</str>
-      <str name="facet.field">source_facet</str>      
-      
+      <str name="facet.field">source_facet</str>
+
       <str name="spellcheck">true</str>
       <str name="spellcheck.dictionary">subject</str>
       <str name="spellcheck.onlyMorePopular">true</str>
@@ -409,7 +413,7 @@ class="${solr.directoryFactory:solr.NRTCachingDirectoryFactory}"/>
 <!-- Spell Check
 
         The spell check component can return a list of alternative spelling
-        suggestions.  
+        suggestions.
 
         http://wiki.apache.org/solr/SpellCheckComponent
      -->
@@ -464,7 +468,7 @@ class="${solr.directoryFactory:solr.NRTCachingDirectoryFactory}"/>
        </lst>
      -->
 
-    <!-- a spellchecker that use an alternate comparator 
+    <!-- a spellchecker that use an alternate comparator
 
          comparatorClass be one of:
           1. score (default)

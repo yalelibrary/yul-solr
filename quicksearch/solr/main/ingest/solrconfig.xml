@@ -2,9 +2,9 @@
 <config>
   <luceneMatchVersion>LUCENE_40</luceneMatchVersion>
 
-<!-- 1/14/2015 - BR - Modified to include NRTCachingDirectoryFactory, caching, and prewarming --> 
+<!-- 1/14/2015 - BR - Modified to include NRTCachingDirectoryFactory, caching, and prewarming -->
 
-<directoryFactory name="DirectoryFactory" 
+<directoryFactory name="DirectoryFactory"
 
 class="${solr.directoryFactory:solr.NRTCachingDirectoryFactory}"/>
 
@@ -24,16 +24,16 @@ class="${solr.directoryFactory:solr.NRTCachingDirectoryFactory}"/>
 </requestHandler>
 
   <requestDispatcher handleSelect="true" >
-    <requestParsers enableRemoteStreaming="true" 
+    <requestParsers enableRemoteStreaming="true"
 	multipartUploadLimitInKB="2048000" />
     <httpCaching never304="true" />
   </requestDispatcher>
-  
+
   <requestHandler name="standard" class="solr.StandardRequestHandler" default="true" />
   <requestHandler name="/analysis/field" startup="lazy" class="solr.FieldAnalysisRequestHandler" />
   <requestHandler name="/update" class="solr.UpdateRequestHandler"  />
   <requestHandler name="/admin/" class="org.apache.solr.handler.admin.AdminHandlers" />
-     
+
   <requestHandler name="/admin/ping" class="solr.PingRequestHandler">
     <lst name="invariants">
       <str name="q">solrpingquery</str>
@@ -42,8 +42,8 @@ class="${solr.directoryFactory:solr.NRTCachingDirectoryFactory}"/>
       <str name="echoParams">all</str>
     </lst>
   </requestHandler>
-   
-  <!-- config for the admin interface --> 
+
+  <!-- config for the admin interface -->
   <admin>
     <defaultQuery>solr</defaultQuery>
   </admin>
@@ -113,7 +113,7 @@ class="${solr.directoryFactory:solr.NRTCachingDirectoryFactory}"/>
         author_addl_txt^250000
         author_addl_txt_cjk^250000
         text^10
-        text_copy_cjk^10 
+        text_copy_cjk^10
         title_series_txt_cjk^1000
         pub_place_txt_cjk^1000
         pub_name_txt_cjk^1000
@@ -124,7 +124,7 @@ class="${solr.directoryFactory:solr.NRTCachingDirectoryFactory}"/>
         <!-- cjk -->
         author_txt_cjk^200
         author_addl_txt_cjk^50
-        
+
       </str>
        <str name="author_pf">
          author_txt^2000
@@ -154,7 +154,7 @@ class="${solr.directoryFactory:solr.NRTCachingDirectoryFactory}"/>
          subtitle_txt_cjk^250000
          title_addl_txt_cjk^100000
          title_series_txt_cjk^50000
-       
+
        </str>
        <str name="title_start_qf">
         title_starts_with^10
@@ -182,34 +182,37 @@ class="${solr.directoryFactory:solr.NRTCachingDirectoryFactory}"/>
 
        <!-- NOT using marc_display because it is large and will slow things down for search results -->
        <str name="fl">
-         id,
-         clio_id_display,
-         score,
-         author_display,
-         author_vern_display,
-         author_facet,
-         format,
-         isbn_display,
-         language_facet,
-         database_restrictions_display,
-         material_type_display,
-         lc_callnum_display,
-         full_publisher_display,
-         location_call_number_id_display,
-         published_display,
-         published_vern_display,
-         title_display,
-         title_vern_display,
-         subject_topic_facet,
-         subject_geo_facet,
-         subject_era_facet,
-         subject_local_facet,
-         subtitle_display,
-         subtitle_vern_display,
-         url_fulltext_display,
-         url_munged_display,
-         url_suppl_display,
-         text_copy_cjk
+            id,
+            clio_id_display,
+            score,
+            author_display,
+            author_vern_display,
+            author_facet,
+            collection_creator_ss,
+            container_display,
+            format,
+            found_in_labels_ss,
+            found_in_uris_ss,
+            isbn_display,
+            language_facet,
+            database_restrictions_display,
+            material_type_display,
+            lc_callnum_display,
+            full_publisher_display,
+            location_call_number_id_display,
+            published_display,
+            published_vern_display,
+            title_display,
+            title_vern_display,
+            subject_topic_facet,
+            subject_geo_facet,
+            subject_era_facet,
+            subject_local_facet,
+            subtitle_display,
+            subtitle_vern_display,
+            url_fulltext_display,
+            url_munged_display,
+            url_suppl_display
        </str>
 
        <str name="facet">true</str>
@@ -342,6 +345,8 @@ class="${solr.directoryFactory:solr.NRTCachingDirectoryFactory}"/>
         pub_name_txt_cjk^1000
         text
         text_copy_cjk
+        container_txt
+        ancestor_display_strings_txt
       </str>
       <str name="pf">
         cjk^100001
@@ -363,6 +368,8 @@ class="${solr.directoryFactory:solr.NRTCachingDirectoryFactory}"/>
         title_series_txt_cjk^1000
         pub_place_txt_cjk^1000
         pub_name_txt_cjk^1000
+        container_txt^10
+        ancestor_display_strings_txt^10
       </str>
       <str name="author_qf">
         author_txt^200
