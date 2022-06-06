@@ -250,6 +250,22 @@
       </analyzer>
     </fieldtype>
 
+    <!-- Used by elevate component when matching search terms -->
+    <fieldtype name="elevate_field" class="solr.TextField" positionIncrementGap="100" autoGeneratePhraseQueries="true">
+      <analyzer>
+        <tokenizer class="solr.WhitespaceTokenizerFactory" />
+        <filter class="solr.TrimFilterFactory" />
+        <filter class="solr.ICUFoldingFilterFactory"/>  <!-- NFKC, case folding, diacritics removed -->
+        <filter class="solr.WordDelimiterFilterFactory"
+                splitOnCaseChange="1" generateWordParts="1" catenateWords="1"
+                splitOnNumerics="0" generateNumberParts="1" catenateNumbers="1"
+                catenateAll="0" preserveOriginal="0" stemEnglishPossessive="0" />
+        <filter class="solr.RemoveDuplicatesTokenFilterFactory" />
+        <filter class="solr.StopFilterFactory" words="elevate-stopwords.txt"/>
+        <filter class="solr.SynonymFilterFactory" synonyms="elevate-synonyms.txt" ignoreCase="true" expand="true"/>
+      </analyzer>
+    </fieldtype>
+
     <!-- Support left-anchored ("starts-with") searching, NEXT-140, NEXT-234
         see:  http://robotlibrarian.billdueber.com/boosting-on-exactish-anchored-phrase-matching-in-solr-sst-4/
       -->

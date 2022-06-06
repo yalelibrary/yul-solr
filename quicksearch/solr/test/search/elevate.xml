@@ -1,34 +1,67 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!--
- Licensed to the Apache Software Foundation (ASF) under one or more
- contributor license agreements.  See the NOTICE file distributed with
- this work for additional information regarding copyright ownership.
- The ASF licenses this file to You under the Apache License, Version 2.0
- (the "License"); you may not use this file except in compliance with
- the License.  You may obtain a copy of the License at
-
-     http://www.apache.org/licenses/LICENSE-2.0
-
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an "AS IS" BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
--->
-
-<!-- If this file is found in the config directory, it will only be
-     loaded once at startup.  If it is found in Solr's data
-     directory, it will be re-loaded every commit.
-
-   See http://wiki.apache.org/solr/QueryElevationComponent for more info
-
+  Elevate file for quicksearch
+  Created June, 2022 as part of the solr 7 upgrade
 -->
 <elevate>
+ <!-- Science (American Association for the Advancement of Science) -->
+ <query text="science">
+  <doc id="12053839" />
+ </query>
+ <!-- The New England journal of medicine -->
+ <query text="nejm">
+  <doc id="12043210" />
+ </query>
+ <!-- The New Yorker -->
+ <query text="new yorker">
+  <doc id="12107711" />
+ </query>
+ <!-- Nature (London) -->
  <query text="nature">
   <doc id="12042719" />
  </query>
+ <!-- JAMA : the journal of the American Medical Association -->
  <query text="jama">
   <doc id="12031766" />
-  <doc id="778746" />
+ </query>
+ <!-- The Lancet (British edition) -->
+ <query text="lancet">
+  <doc id="12037634" />
+ </query>
+ <!-- Psychological bulletin -->
+ <query text="psychological bulletin">
+  <doc id="12113414" />
+ </query>
+ <!-- Harvard business review -->
+ <query text="harvard business review">
+  <doc id="12026052" />
+ </query>
+ <!-- Cell -->
+ <query text="cell">
+  <doc id="12012458" />
+ </query>
+ <!-- TLS. Times literary supplement (1969) -->
+ <query text="tls">
+  <doc id="12058809" />
+ </query>
+ <!-- Social science & medicine (1982) -->
+ <query text="social science medicine">
+  <doc id="12055304" />
+ </query>
+ <!-- Journal of affective disorders -->
+ <query text="journal of affective disorders">
+  <doc id="12032411" />
+ </query>
+ <!-- Blood -->
+ <query text="blood">
+  <doc id="12009017" />
+ </query>
+ <!-- Pediatrics (Evanston) -->
+ <query text="pediatrics">
+  <doc id="12046746" />
+ </query>
+ <!-- Developmental Psychology -->
+ <query text="developmental psychology">
+  <doc id="12078050" />
  </query>
 </elevate>
