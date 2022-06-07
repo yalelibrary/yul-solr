@@ -38,11 +38,6 @@
         </lst>
     </requestHandler>
 
-    <searchComponent name="elevator" class="solr.QueryElevationComponent" >
-        <str name="queryFieldType">text_general_unstem</str>
-        <str name="config-file">elevate.xml</str>
-        <str name="forceElevation">false</str>
-    </searchComponent>
 
     <requestDispatcher handleSelect="true">
         <requestParsers enableRemoteStreaming="true"
@@ -312,7 +307,6 @@
           -->
         <arr name="last-components">
             <str>spellcheck</str>
-            <str>elevator</str>
         </arr>
 
     </requestHandler>
