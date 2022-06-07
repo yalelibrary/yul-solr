@@ -73,6 +73,8 @@
    <dynamicField name="*_sort" type="alphaOnlySort" indexed="true" stored="false" multiValued="false" />
    <dynamicField name="*_unstem_search" type="text_general_unstem" indexed="true" stored="false" multiValued="true" />
    <dynamicField name="*_starts_with" type="text_starts_with" indexed="true" stored="false" multiValued="true" />
+   <dynamicField name="*_tim" type="tint" indexed="true"  stored="true" multiValued="true"/>
+   <dynamicField name="*_left_edge" type="text_left_edge" indexed="true" stored="false" multiValued="true" />
 
 
    <!-- <dynamicField name="*spell" type="text_general" indexed="true" stored="false" multiValued="true" /> -->
@@ -126,6 +128,9 @@
    <copyField source="subject_txt" dest="subject_txt_cjk"/>
    <copyField source="pub_place_txt" dest="pub_place_txt_cjk"/>
    <copyField source="pub_name_txt" dest="pub_name_txt_cjk"/>
+
+   <!-- Call number edge -->
+   <copyField source="call_number_txt" dest="call_number_left_edge"/>
 
 
   <types>
@@ -242,6 +247,22 @@
           splitOnNumerics="0" generateNumberParts="1" catenateNumbers="1"
           catenateAll="0" preserveOriginal="0" stemEnglishPossessive="0" />
         <filter class="solr.RemoveDuplicatesTokenFilterFactory" />
+      </analyzer>
+    </fieldtype>
+
+    <!-- Used by elevate component when matching search terms -->
+    <fieldtype name="elevate_field" class="solr.TextField" positionIncrementGap="100" autoGeneratePhraseQueries="true">
+      <analyzer>
+        <tokenizer class="solr.WhitespaceTokenizerFactory" />
+        <filter class="solr.TrimFilterFactory" />
+        <filter class="solr.ICUFoldingFilterFactory"/>  <!-- NFKC, case folding, diacritics removed -->
+        <filter class="solr.WordDelimiterFilterFactory"
+                splitOnCaseChange="1" generateWordParts="1" catenateWords="1"
+                splitOnNumerics="0" generateNumberParts="1" catenateNumbers="1"
+                catenateAll="0" preserveOriginal="0" stemEnglishPossessive="0" />
+        <filter class="solr.RemoveDuplicatesTokenFilterFactory" />
+        <filter class="solr.StopFilterFactory" words="elevate-stopwords.txt"/>
+        <filter class="solr.SynonymFilterFactory" synonyms="elevate-synonyms.txt" ignoreCase="true" expand="true"/>
       </analyzer>
     </fieldtype>
 
@@ -396,6 +417,21 @@
             outputUnigrams="false"/>
   </analyzer>
 </fieldType>
+
+
+   <!--  text left edge field type, used for callnumber edge index/search -->
+   <fieldtype name="text_left_edge" class="solr.TextField" positionIncrementGap="100" autoGeneratePhraseQueries="true">
+     <analyzer type="index">
+       <tokenizer class="solr.EdgeNGramTokenizerFactory" minGramSize="1" maxGramSize="50"/>
+       <filter class="solr.TrimFilterFactory"/>
+       <filter class="solr.LowerCaseFilterFactory"/>
+     </analyzer>
+     <analyzer type="query">
+       <tokenizer class="solr.KeywordTokenizerFactory"/>
+       <filter class="solr.TrimFilterFactory"/>
+       <filter class="solr.LowerCaseFilterFactory"/>
+     </analyzer>
+   </fieldtype>
 
  </types>
 
