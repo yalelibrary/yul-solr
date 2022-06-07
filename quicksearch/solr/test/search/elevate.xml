@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!--
+
   Elevate file for quicksearch
   Created June, 2022 as part of the solr 7 upgrade
+
+  See Also: elevate-stopwords.txt and elevate-synonyms.txt
+  See elevate_field in schema.xml and elevator in solrconfig.xml
+
 -->
 <elevate>
  <!-- Science (American Association for the Advancement of Science) -->
@@ -52,7 +57,7 @@
  <query text="journal of affective disorders">
   <doc id="12032411" />
  </query>
- <!-- Blood -->
+ <!-- Blood journal of the American Society of Hematology -->
  <query text="blood">
   <doc id="12009017" />
  </query>
@@ -63,5 +68,13 @@
  <!-- Developmental Psychology -->
  <query text="developmental psychology">
   <doc id="12078050" />
+ </query>
+ <!-- New York review of books -->
+ <query text="new york review of books">
+  <doc id="12043474" />
+ </query>
+ <!-- Obstetrics and gynecology -->
+ <query text="obstetrics and gynecology">
+  <doc id="12044713" />
  </query>
 </elevate>
