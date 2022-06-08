@@ -39,7 +39,7 @@
     </requestHandler>
 
     <searchComponent name="elevator" class="solr.QueryElevationComponent" >
-        <str name="queryFieldType">text_general_unstem</str>
+        <str name="queryFieldType">elevate_field</str>
         <str name="config-file">elevate.xml</str>
         <str name="forceElevation">false</str>
     </searchComponent>
