@@ -1,0 +1,3 @@
+journal of american medical association => jama
+new england journal of medicine => nejm
+times literary supplement => tls
