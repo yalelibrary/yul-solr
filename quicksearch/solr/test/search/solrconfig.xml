@@ -107,56 +107,45 @@
                     <str name="facet.field">format</str>
                     <str name="qt">search</str>
                     <str name="fq">source_facet:(NOT aspace_archival_object)</str>
+                    <str name="fq">format:&quot;Software &amp; Electronic Media&quot;</str>
                     <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
-                    <str name="rows">25</str>
+                    <str name="rows">3</str>
                     <str name="facet">true</str>
                     <str name="wt">json</str>
                     <str name="f.format.facet.limit">-1</str>
-                </lst>
-                <lst>
-                    <str name="qt">search</str>
-                    <str name="fq">{!raw f=source_facet}databases</str>
-                    <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
-                    <str name="rows">25</str>
-                    <str name="wt">json</str>
-                </lst>
-                <lst>
-                    <str name="facet.field">format</str>
-                    <str name="qt">search</str>
-                    <str name="fq">{!raw f=format}Archives or Manuscripts</str>
-                    <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
-                    <str name="rows">25</str>
-                    <str name="facet">true</str>
-                    <str name="wt">json</str>
-                    <str name="f.format.facet.limit">11</str>
                 </lst>
                 <lst>
                     <str name="facet.field">format</str>
                     <str name="qt">search</str>
                     <str name="fq">source_facet:(NOT aspace_archival_object)</str>
-                    <str name="fq">format:&quot;Online&quot;</str>
+                    <str name="fq">format:&quot;Data Sets&quot;</str>
                     <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
-                    <str name="rows">25</str>
+                    <str name="rows">3</str>
                     <str name="facet">true</str>
                     <str name="wt">json</str>
                     <str name="f.format.facet.limit">-1</str>
                 </lst>
                 <lst>
+                    <str name="facet.field">format</str>
                     <str name="qt">search</str>
-                    <str name="fq">{!raw f=source_facet}databases</str>
+                    <str name="fq">source_facet:(NOT aspace_archival_object)</str>
+                    <str name="fq">format:&quot;Video &amp; Film&quot;</str>
                     <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
-                    <str name="rows">25</str>
+                    <str name="rows">3</str>
+                    <str name="facet">true</str>
                     <str name="wt">json</str>
+                    <str name="f.format.facet.limit">-1</str>
                 </lst>
                 <lst>
                     <str name="facet.field">format</str>
                     <str name="qt">search</str>
-                    <str name="fq">{!raw f=format}Archives or Manuscripts</str>
+                    <str name="fq">source_facet:(NOT aspace_archival_object)</str>
+                    <str name="fq">format:&quot;Journals &amp; Newspapers&quot;</str>
                     <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
-                    <str name="rows">25</str>
+                    <str name="rows">3</str>
                     <str name="facet">true</str>
                     <str name="wt">json</str>
-                    <str name="f.format.facet.limit">11</str>
+                    <str name="f.format.facet.limit">-1</str>
                 </lst>
                 <lst>
                     <str name="facet.field">format</str>
@@ -164,10 +153,73 @@
                     <str name="fq">source_facet:(NOT aspace_archival_object)</str>
                     <str name="fq">format:&quot;Books&quot;</str>
                     <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
-                    <str name="rows">25</str>
+                    <str name="rows">3</str>
                     <str name="facet">true</str>
                     <str name="wt">json</str>
                     <str name="f.format.facet.limit">-1</str>
+                </lst>
+                <lst>
+                    <str name="facet.field">format</str>
+                    <str name="qt">search</str>
+                    <str name="fq">source_facet:(NOT aspace_archival_object)</str>
+                    <str name="fq">format:&quot;Audio&quot;</str>
+                    <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
+                    <str name="rows">3</str>
+                    <str name="facet">true</str>
+                    <str name="wt">json</str>
+                    <str name="f.format.facet.limit">-1</str>
+                </lst>
+                <lst>
+                    <str name="facet.field">format</str>
+                    <str name="qt">search</str>
+                    <str name="fq">{!raw f=format}Archives or Manuscripts</str>
+                    <str name="fq">format:&quot;Archives or Manuscripts&quot;</str>
+                    <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
+                    <str name="rows">3</str>
+                    <str name="facet">true</str>
+                    <str name="wt">json</str>
+                    <str name="f.format.facet.limit">11</str>
+                </lst>
+                <lst>
+                    <str name="facet.field">format</str>
+                    <str name="qt">search</str>
+                    <str name="fq">source_facet:(NOT aspace_archival_object)</str>
+                    <str name="fq">format:&quot;Other&quot;</str>
+                    <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
+                    <str name="rows">3</str>
+                    <str name="facet">true</str>
+                    <str name="wt">json</str>
+                    <str name="f.format.facet.limit">-1</str>
+                </lst>
+                <lst>
+                    <str name="facet.field">format</str>
+                    <str name="qt">search</str>
+                    <str name="fq">source_facet:(NOT aspace_archival_object)</str>
+                    <str name="fq">format:&quot;Maps &amp; GIS&quot;</str>
+                    <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
+                    <str name="rows">3</str>
+                    <str name="facet">true</str>
+                    <str name="wt">json</str>
+                    <str name="f.format.facet.limit">-1</str>
+                </lst>
+                <lst>
+                    <str name="facet.field">format</str>
+                    <str name="qt">search</str>
+                    <str name="fq">source_facet:(NOT aspace_archival_object)</str>
+                    <str name="fq">format:&quot;Music Scores&quot;</str>
+                    <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
+                    <str name="rows">3</str>
+                    <str name="facet">true</str>
+                    <str name="wt">json</str>
+                    <str name="f.format.facet.limit">-1</str>
+                </lst>
+                <lst>
+                    <str name="qt">search</str>
+                    <str name="fq">{!raw f=source_facet}databases</str>
+                    <str name="fq">format:&quot;Databases&quot;</str>
+                    <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
+                    <str name="rows">3</str>
+                    <str name="wt">json</str>
                 </lst>
             </arr>
         </listener>
@@ -218,56 +270,45 @@
                     <str name="facet.field">format</str>
                     <str name="qt">search</str>
                     <str name="fq">source_facet:(NOT aspace_archival_object)</str>
+                    <str name="fq">format:&quot;Software &amp; Electronic Media&quot;</str>
                     <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
-                    <str name="rows">25</str>
+                    <str name="rows">3</str>
                     <str name="facet">true</str>
                     <str name="wt">json</str>
                     <str name="f.format.facet.limit">-1</str>
-                </lst>
-                <lst>
-                    <str name="qt">search</str>
-                    <str name="fq">{!raw f=source_facet}databases</str>
-                    <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
-                    <str name="rows">25</str>
-                    <str name="wt">json</str>
-                </lst>
-                <lst>
-                    <str name="facet.field">format</str>
-                    <str name="qt">search</str>
-                    <str name="fq">{!raw f=format}Archives or Manuscripts</str>
-                    <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
-                    <str name="rows">25</str>
-                    <str name="facet">true</str>
-                    <str name="wt">json</str>
-                    <str name="f.format.facet.limit">11</str>
                 </lst>
                 <lst>
                     <str name="facet.field">format</str>
                     <str name="qt">search</str>
                     <str name="fq">source_facet:(NOT aspace_archival_object)</str>
-                    <str name="fq">format:&quot;Online&quot;</str>
+                    <str name="fq">format:&quot;Data Sets&quot;</str>
                     <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
-                    <str name="rows">25</str>
+                    <str name="rows">3</str>
                     <str name="facet">true</str>
                     <str name="wt">json</str>
                     <str name="f.format.facet.limit">-1</str>
                 </lst>
                 <lst>
+                    <str name="facet.field">format</str>
                     <str name="qt">search</str>
-                    <str name="fq">{!raw f=source_facet}databases</str>
+                    <str name="fq">source_facet:(NOT aspace_archival_object)</str>
+                    <str name="fq">format:&quot;Video &amp; Film&quot;</str>
                     <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
-                    <str name="rows">25</str>
+                    <str name="rows">3</str>
+                    <str name="facet">true</str>
                     <str name="wt">json</str>
+                    <str name="f.format.facet.limit">-1</str>
                 </lst>
                 <lst>
                     <str name="facet.field">format</str>
                     <str name="qt">search</str>
-                    <str name="fq">{!raw f=format}Archives or Manuscripts</str>
+                    <str name="fq">source_facet:(NOT aspace_archival_object)</str>
+                    <str name="fq">format:&quot;Journals &amp; Newspapers&quot;</str>
                     <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
-                    <str name="rows">25</str>
+                    <str name="rows">3</str>
                     <str name="facet">true</str>
                     <str name="wt">json</str>
-                    <str name="f.format.facet.limit">11</str>
+                    <str name="f.format.facet.limit">-1</str>
                 </lst>
                 <lst>
                     <str name="facet.field">format</str>
@@ -275,10 +316,73 @@
                     <str name="fq">source_facet:(NOT aspace_archival_object)</str>
                     <str name="fq">format:&quot;Books&quot;</str>
                     <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
-                    <str name="rows">25</str>
+                    <str name="rows">3</str>
                     <str name="facet">true</str>
                     <str name="wt">json</str>
                     <str name="f.format.facet.limit">-1</str>
+                </lst>
+                <lst>
+                    <str name="facet.field">format</str>
+                    <str name="qt">search</str>
+                    <str name="fq">source_facet:(NOT aspace_archival_object)</str>
+                    <str name="fq">format:&quot;Audio&quot;</str>
+                    <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
+                    <str name="rows">3</str>
+                    <str name="facet">true</str>
+                    <str name="wt">json</str>
+                    <str name="f.format.facet.limit">-1</str>
+                </lst>
+                <lst>
+                    <str name="facet.field">format</str>
+                    <str name="qt">search</str>
+                    <str name="fq">{!raw f=format}Archives or Manuscripts</str>
+                    <str name="fq">format:&quot;Archives or Manuscripts&quot;</str>
+                    <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
+                    <str name="rows">3</str>
+                    <str name="facet">true</str>
+                    <str name="wt">json</str>
+                    <str name="f.format.facet.limit">11</str>
+                </lst>
+                <lst>
+                    <str name="facet.field">format</str>
+                    <str name="qt">search</str>
+                    <str name="fq">source_facet:(NOT aspace_archival_object)</str>
+                    <str name="fq">format:&quot;Other&quot;</str>
+                    <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
+                    <str name="rows">3</str>
+                    <str name="facet">true</str>
+                    <str name="wt">json</str>
+                    <str name="f.format.facet.limit">-1</str>
+                </lst>
+                <lst>
+                    <str name="facet.field">format</str>
+                    <str name="qt">search</str>
+                    <str name="fq">source_facet:(NOT aspace_archival_object)</str>
+                    <str name="fq">format:&quot;Maps &amp; GIS&quot;</str>
+                    <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
+                    <str name="rows">3</str>
+                    <str name="facet">true</str>
+                    <str name="wt">json</str>
+                    <str name="f.format.facet.limit">-1</str>
+                </lst>
+                <lst>
+                    <str name="facet.field">format</str>
+                    <str name="qt">search</str>
+                    <str name="fq">source_facet:(NOT aspace_archival_object)</str>
+                    <str name="fq">format:&quot;Music Scores&quot;</str>
+                    <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
+                    <str name="rows">3</str>
+                    <str name="facet">true</str>
+                    <str name="wt">json</str>
+                    <str name="f.format.facet.limit">-1</str>
+                </lst>
+                <lst>
+                    <str name="qt">search</str>
+                    <str name="fq">{!raw f=source_facet}databases</str>
+                    <str name="fq">format:&quot;Databases&quot;</str>
+                    <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
+                    <str name="rows">3</str>
+                    <str name="wt">json</str>
                 </lst>
             </arr>
         </listener>
