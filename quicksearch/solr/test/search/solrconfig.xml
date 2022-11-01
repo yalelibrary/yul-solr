@@ -61,120 +61,224 @@
 
         <queryResultMaxDocsCached>200</queryResultMaxDocsCached>
 
-
         <listener event="newSearcher" class="solr.QuerySenderListener">
             <arr name="queries">
                 <lst>
-                    <str name="q">frohlich</str>
+                    <str name="f.author_facet.facet.limit">6</str>
+                    <str name="f.pub_date_sort.facet.limit">4</str>
+                    <str name="facet.field">format</str>
+                    <str name="facet.field">pub_date_sort</str>
+                    <str name="facet.field">author_facet</str>
+                    <str name="facet.field">location_facet</str>
+                    <str name="facet.field">language_facet</str>
+                    <str name="facet.field">subject_hierc_ss</str>
+                    <str name="facet.field">subject_topic_facet</str>
+                    <str name="facet.field">subject_geo_facet</str>
+                    <str name="facet.field">subject_era_facet</str>
+                    <str name="facet.field">subject_form_facet</str>
+                    <str name="facet.field">subject_local_facet</str>
+                    <str name="facet.field">lc_1letter_facet</str>
+                    <str name="facet.field">lc_subclass_facet</str>
+                    <str name="f.location_facet.facet.limit">-1</str>
+                    <str name="f.subject_era_facet.facet.limit">11</str>
+                    <str name="qt">search</str>
+                    <str name="f.subject_form_facet.facet.limit">11</str>
+                    <str name="f.lc_1letter_facet.facet.limit">31</str>
+                    <str name="f.lc_subclass_facet.facet.limit">26</str>
+                    <str name="f.location_facet.facet.sort">index</str>
+                    <str name="fq">source_facet:(NOT aspace_archival_object)</str>
+                    <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
+                    <str name="rows">25</str>
+                    <str name="f.subject_local_facet.facet.limit">11</str>
+                    <str name="facet.query">acq_dt:[2022-10-24T00:00:00Z TO *]</str>
+                    <str name="facet.query">acq_dt:[2022-09-30T00:00:00Z TO *]</str>
+                    <str name="facet.query">acq_dt:[2022-04-30T00:00:00Z TO *]</str>
+                    <str name="facet.query">acq_dt:[2021-10-31T00:00:00Z TO *]</str>
+                    <str name="f.subject_topic_facet.facet.limit">11</str>
+                    <str name="f.subject_geo_facet.facet.limit">11</str>
+                    <str name="stats">true</str>
+                    <str name="facet">true</str>
+                    <str name="wt">json</str>
+                    <str name="f.format.facet.limit">-1</str>
+                    <str name="f.language_facet.facet.limit">11</str>
+                    <str name="stats.field">pub_date_sort</str>
                 </lst>
                 <lst>
-                    <str name="q">rainbow</str>
+                    <str name="facet.field">format</str>
+                    <str name="qt">search</str>
+                    <str name="fq">source_facet:(NOT aspace_archival_object)</str>
+                    <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
+                    <str name="rows">25</str>
+                    <str name="facet">true</str>
+                    <str name="wt">json</str>
+                    <str name="f.format.facet.limit">-1</str>
                 </lst>
                 <lst>
-                    <str name="q">henry</str>
+                    <str name="qt">search</str>
+                    <str name="fq">{!raw f=source_facet}databases</str>
+                    <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
+                    <str name="rows">25</str>
+                    <str name="wt">json</str>
                 </lst>
                 <lst>
-                    <str name="q">iliad</str>
+                    <str name="facet.field">format</str>
+                    <str name="qt">search</str>
+                    <str name="fq">{!raw f=format}Archives or Manuscripts</str>
+                    <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
+                    <str name="rows">25</str>
+                    <str name="facet">true</str>
+                    <str name="wt">json</str>
+                    <str name="f.format.facet.limit">11</str>
                 </lst>
                 <lst>
-                    <str name="q">jstor</str>
+                    <str name="facet.field">format</str>
+                    <str name="qt">search</str>
+                    <str name="fq">source_facet:(NOT aspace_archival_object)</str>
+                    <str name="fq">format:&quot;Online&quot;</str>
+                    <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
+                    <str name="rows">25</str>
+                    <str name="facet">true</str>
+                    <str name="wt">json</str>
+                    <str name="f.format.facet.limit">-1</str>
                 </lst>
                 <lst>
-                    <str name="q">pubmed</str>
+                    <str name="qt">search</str>
+                    <str name="fq">{!raw f=source_facet}databases</str>
+                    <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
+                    <str name="rows">25</str>
+                    <str name="wt">json</str>
                 </lst>
                 <lst>
-                    <str name="q">proquest</str>
+                    <str name="facet.field">format</str>
+                    <str name="qt">search</str>
+                    <str name="fq">{!raw f=format}Archives or Manuscripts</str>
+                    <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
+                    <str name="rows">25</str>
+                    <str name="facet">true</str>
+                    <str name="wt">json</str>
+                    <str name="f.format.facet.limit">11</str>
                 </lst>
                 <lst>
-                    <str name="q">title:new york times</str>
-                </lst>
-                <lst>
-                    <str name="q">factiva</str>
-                </lst>
-                <lst>
-                    <str name="q">oxford english dictionary</str>
-                </lst>
-                <lst>
-                    <str name="q">chicago manual style</str>
-                </lst>
-                <lst>
-                    <str name="q">wall street journal</str>
-                </lst>
-                <lst>
-                    <str name="q">nature</str>
-                </lst>
-                <lst>
-                    <str name="q">science</str>
-                </lst>
-                <lst>
-                    <str name="q">title:thomson</str>
-                </lst>
-                <lst>
-                    <str name="q">new yorker</str>
-                </lst>
-                <lst>
-                    <str name="q">scopus</str>
-                </lst>
-                <lst>
-                    <str name="q">lexis nexis</str>
+                    <str name="facet.field">format</str>
+                    <str name="qt">search</str>
+                    <str name="fq">source_facet:(NOT aspace_archival_object)</str>
+                    <str name="fq">format:&quot;Books&quot;</str>
+                    <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
+                    <str name="rows">25</str>
+                    <str name="facet">true</str>
+                    <str name="wt">json</str>
+                    <str name="f.format.facet.limit">-1</str>
                 </lst>
             </arr>
         </listener>
+
         <listener event="firstSearcher" class="solr.QuerySenderListener">
             <arr name="queries">
                 <lst>
-                    <str name="q">frohlich</str>
+                    <str name="f.author_facet.facet.limit">6</str>
+                    <str name="f.pub_date_sort.facet.limit">4</str>
+                    <str name="facet.field">format</str>
+                    <str name="facet.field">pub_date_sort</str>
+                    <str name="facet.field">author_facet</str>
+                    <str name="facet.field">location_facet</str>
+                    <str name="facet.field">language_facet</str>
+                    <str name="facet.field">subject_hierc_ss</str>
+                    <str name="facet.field">subject_topic_facet</str>
+                    <str name="facet.field">subject_geo_facet</str>
+                    <str name="facet.field">subject_era_facet</str>
+                    <str name="facet.field">subject_form_facet</str>
+                    <str name="facet.field">subject_local_facet</str>
+                    <str name="facet.field">lc_1letter_facet</str>
+                    <str name="facet.field">lc_subclass_facet</str>
+                    <str name="f.location_facet.facet.limit">-1</str>
+                    <str name="f.subject_era_facet.facet.limit">11</str>
+                    <str name="qt">search</str>
+                    <str name="f.subject_form_facet.facet.limit">11</str>
+                    <str name="f.lc_1letter_facet.facet.limit">31</str>
+                    <str name="f.lc_subclass_facet.facet.limit">26</str>
+                    <str name="f.location_facet.facet.sort">index</str>
+                    <str name="fq">source_facet:(NOT aspace_archival_object)</str>
+                    <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
+                    <str name="rows">25</str>
+                    <str name="f.subject_local_facet.facet.limit">11</str>
+                    <str name="facet.query">acq_dt:[2022-10-24T00:00:00Z TO *]</str>
+                    <str name="facet.query">acq_dt:[2022-09-30T00:00:00Z TO *]</str>
+                    <str name="facet.query">acq_dt:[2022-04-30T00:00:00Z TO *]</str>
+                    <str name="facet.query">acq_dt:[2021-10-31T00:00:00Z TO *]</str>
+                    <str name="f.subject_topic_facet.facet.limit">11</str>
+                    <str name="f.subject_geo_facet.facet.limit">11</str>
+                    <str name="stats">true</str>
+                    <str name="facet">true</str>
+                    <str name="wt">json</str>
+                    <str name="f.format.facet.limit">-1</str>
+                    <str name="f.language_facet.facet.limit">11</str>
+                    <str name="stats.field">pub_date_sort</str>
                 </lst>
                 <lst>
-                    <str name="q">rainbow</str>
+                    <str name="facet.field">format</str>
+                    <str name="qt">search</str>
+                    <str name="fq">source_facet:(NOT aspace_archival_object)</str>
+                    <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
+                    <str name="rows">25</str>
+                    <str name="facet">true</str>
+                    <str name="wt">json</str>
+                    <str name="f.format.facet.limit">-1</str>
                 </lst>
                 <lst>
-                    <str name="q">henry</str>
+                    <str name="qt">search</str>
+                    <str name="fq">{!raw f=source_facet}databases</str>
+                    <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
+                    <str name="rows">25</str>
+                    <str name="wt">json</str>
                 </lst>
                 <lst>
-                    <str name="q">iliad</str>
+                    <str name="facet.field">format</str>
+                    <str name="qt">search</str>
+                    <str name="fq">{!raw f=format}Archives or Manuscripts</str>
+                    <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
+                    <str name="rows">25</str>
+                    <str name="facet">true</str>
+                    <str name="wt">json</str>
+                    <str name="f.format.facet.limit">11</str>
                 </lst>
                 <lst>
-                    <str name="q">jstor</str>
+                    <str name="facet.field">format</str>
+                    <str name="qt">search</str>
+                    <str name="fq">source_facet:(NOT aspace_archival_object)</str>
+                    <str name="fq">format:&quot;Online&quot;</str>
+                    <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
+                    <str name="rows">25</str>
+                    <str name="facet">true</str>
+                    <str name="wt">json</str>
+                    <str name="f.format.facet.limit">-1</str>
                 </lst>
                 <lst>
-                    <str name="q">pubmed</str>
+                    <str name="qt">search</str>
+                    <str name="fq">{!raw f=source_facet}databases</str>
+                    <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
+                    <str name="rows">25</str>
+                    <str name="wt">json</str>
                 </lst>
                 <lst>
-                    <str name="q">proquest</str>
+                    <str name="facet.field">format</str>
+                    <str name="qt">search</str>
+                    <str name="fq">{!raw f=format}Archives or Manuscripts</str>
+                    <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
+                    <str name="rows">25</str>
+                    <str name="facet">true</str>
+                    <str name="wt">json</str>
+                    <str name="f.format.facet.limit">11</str>
                 </lst>
                 <lst>
-                    <str name="q">title:new york times</str>
-                </lst>
-                <lst>
-                    <str name="q">factiva</str>
-                </lst>
-                <lst>
-                    <str name="q">oxford english dictionary</str>
-                </lst>
-                <lst>
-                    <str name="q">chicago manual style</str>
-                </lst>
-                <lst>
-                    <str name="q">wall street journal</str>
-                </lst>
-                <lst>
-                    <str name="q">nature</str>
-                </lst>
-                <lst>
-                    <str name="q">science</str>
-                </lst>
-                <lst>
-                    <str name="q">title:thomson</str>
-                </lst>
-                <lst>
-                    <str name="q">new yorker</str>
-                </lst>
-                <lst>
-                    <str name="q">scopus</str>
-                </lst>
-                <lst>
-                    <str name="q">lexis nexis</str>
+                    <str name="facet.field">format</str>
+                    <str name="qt">search</str>
+                    <str name="fq">source_facet:(NOT aspace_archival_object)</str>
+                    <str name="fq">format:&quot;Books&quot;</str>
+                    <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
+                    <str name="rows">25</str>
+                    <str name="facet">true</str>
+                    <str name="wt">json</str>
+                    <str name="f.format.facet.limit">-1</str>
                 </lst>
             </arr>
         </listener>
