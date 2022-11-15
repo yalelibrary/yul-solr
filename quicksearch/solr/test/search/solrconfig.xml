@@ -89,7 +89,7 @@
                     <str name="f.location_facet.facet.sort">index</str>
                     <str name="fq">source_facet:(NOT aspace_archival_object)</str>
                     <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
-                    <str name="rows">10</str>
+                    <str name="rows">25</str>
                     <str name="f.subject_local_facet.facet.limit">11</str>
                     <str name="facet.query">acq_dt:[2022-10-24T00:00:00Z TO *]</str>
                     <str name="facet.query">acq_dt:[2022-09-30T00:00:00Z TO *]</str>
@@ -131,7 +131,7 @@
                     <str name="f.location_facet.facet.sort">index</str>
                     <str name="fq">source_facet:(NOT aspace_archival_object)</str>
                     <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
-                    <str name="rows">10</str>
+                    <str name="rows">25</str>
                     <str name="f.subject_local_facet.facet.limit">11</str>
                     <str name="facet.query">acq_dt:[2022-10-24T00:00:00Z TO *]</str>
                     <str name="facet.query">acq_dt:[2022-09-30T00:00:00Z TO *]</str>
@@ -172,7 +172,7 @@
                     <str name="f.location_facet.facet.sort">index</str>
                     <str name="fq">source_facet:(NOT aspace_archival_object)</str>
                     <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
-                    <str name="rows">10</str>
+                    <str name="rows">25</str>
                     <str name="f.subject_local_facet.facet.limit">11</str>
                     <str name="facet.query">acq_dt:[2022-10-24T00:00:00Z TO *]</str>
                     <str name="facet.query">acq_dt:[2022-09-30T00:00:00Z TO *]</str>
@@ -213,7 +213,7 @@
                     <str name="f.location_facet.facet.sort">index</str>
                     <str name="fq">source_facet:(NOT aspace_archival_object)</str>
                     <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
-                    <str name="rows">10</str>
+                    <str name="rows">25</str>
                     <str name="f.subject_local_facet.facet.limit">11</str>
                     <str name="facet.query">acq_dt:[2022-10-24T00:00:00Z TO *]</str>
                     <str name="facet.query">acq_dt:[2022-09-30T00:00:00Z TO *]</str>
@@ -254,7 +254,7 @@
                     <str name="f.location_facet.facet.sort">index</str>
                     <str name="fq">source_facet:(NOT aspace_archival_object)</str>
                     <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
-                    <str name="rows">10</str>
+                    <str name="rows">25</str>
                     <str name="f.subject_local_facet.facet.limit">11</str>
                     <str name="facet.query">acq_dt:[2022-10-24T00:00:00Z TO *]</str>
                     <str name="facet.query">acq_dt:[2022-09-30T00:00:00Z TO *]</str>
@@ -295,7 +295,7 @@
                     <str name="f.location_facet.facet.sort">index</str>
                     <str name="fq">source_facet:(NOT aspace_archival_object)</str>
                     <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
-                    <str name="rows">10</str>
+                    <str name="rows">25</str>
                     <str name="f.subject_local_facet.facet.limit">11</str>
                     <str name="facet.query">acq_dt:[2022-10-24T00:00:00Z TO *]</str>
                     <str name="facet.query">acq_dt:[2022-09-30T00:00:00Z TO *]</str>
@@ -336,7 +336,7 @@
                     <str name="f.location_facet.facet.sort">index</str>
                     <str name="fq">source_facet:(NOT aspace_archival_object)</str>
                     <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
-                    <str name="rows">10</str>
+                    <str name="rows">25</str>
                     <str name="f.subject_local_facet.facet.limit">11</str>
                     <str name="facet.query">acq_dt:[2022-10-24T00:00:00Z TO *]</str>
                     <str name="facet.query">acq_dt:[2022-09-30T00:00:00Z TO *]</str>
@@ -377,7 +377,7 @@
                     <str name="f.location_facet.facet.sort">index</str>
                     <str name="fq">source_facet:(NOT aspace_archival_object)</str>
                     <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
-                    <str name="rows">10</str>
+                    <str name="rows">25</str>
                     <str name="f.subject_local_facet.facet.limit">11</str>
                     <str name="facet.query">acq_dt:[2022-10-24T00:00:00Z TO *]</str>
                     <str name="facet.query">acq_dt:[2022-09-30T00:00:00Z TO *]</str>
@@ -418,7 +418,7 @@
                     <str name="f.location_facet.facet.sort">index</str>
                     <str name="fq">source_facet:(NOT aspace_archival_object)</str>
                     <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
-                    <str name="rows">10</str>
+                    <str name="rows">25</str>
                     <str name="f.subject_local_facet.facet.limit">11</str>
                     <str name="facet.query">acq_dt:[2022-10-24T00:00:00Z TO *]</str>
                     <str name="facet.query">acq_dt:[2022-09-30T00:00:00Z TO *]</str>
@@ -459,7 +459,7 @@
                     <str name="f.location_facet.facet.sort">index</str>
                     <str name="fq">source_facet:(NOT aspace_archival_object)</str>
                     <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
-                    <str name="rows">10</str>
+                    <str name="rows">25</str>
                     <str name="f.subject_local_facet.facet.limit">11</str>
                     <str name="facet.query">acq_dt:[2022-10-24T00:00:00Z TO *]</str>
                     <str name="facet.query">acq_dt:[2022-09-30T00:00:00Z TO *]</str>
@@ -500,7 +500,7 @@
                     <str name="f.location_facet.facet.sort">index</str>
                     <str name="fq">source_facet:(NOT aspace_archival_object)</str>
                     <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
-                    <str name="rows">10</str>
+                    <str name="rows">25</str>
                     <str name="f.subject_local_facet.facet.limit">11</str>
                     <str name="facet.query">acq_dt:[2022-10-24T00:00:00Z TO *]</str>
                     <str name="facet.query">acq_dt:[2022-09-30T00:00:00Z TO *]</str>
@@ -541,7 +541,7 @@
                     <str name="f.location_facet.facet.sort">index</str>
                     <str name="fq">source_facet:(NOT aspace_archival_object)</str>
                     <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
-                    <str name="rows">10</str>
+                    <str name="rows">25</str>
                     <str name="f.subject_local_facet.facet.limit">11</str>
                     <str name="facet.query">acq_dt:[2022-10-24T00:00:00Z TO *]</str>
                     <str name="facet.query">acq_dt:[2022-09-30T00:00:00Z TO *]</str>
@@ -582,7 +582,7 @@
                     <str name="f.location_facet.facet.sort">index</str>
                     <str name="fq">source_facet:(NOT aspace_archival_object)</str>
                     <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
-                    <str name="rows">10</str>
+                    <str name="rows">25</str>
                     <str name="f.subject_local_facet.facet.limit">11</str>
                     <str name="facet.query">acq_dt:[2022-10-24T00:00:00Z TO *]</str>
                     <str name="facet.query">acq_dt:[2022-09-30T00:00:00Z TO *]</str>
@@ -623,7 +623,7 @@
                     <str name="f.location_facet.facet.sort">index</str>
                     <str name="fq">source_facet:(NOT aspace_archival_object)</str>
                     <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
-                    <str name="rows">10</str>
+                    <str name="rows">25</str>
                     <str name="f.subject_local_facet.facet.limit">11</str>
                     <str name="facet.query">acq_dt:[2022-10-24T00:00:00Z TO *]</str>
                     <str name="facet.query">acq_dt:[2022-09-30T00:00:00Z TO *]</str>
@@ -664,7 +664,7 @@
                     <str name="f.location_facet.facet.sort">index</str>
                     <str name="fq">source_facet:(NOT aspace_archival_object)</str>
                     <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
-                    <str name="rows">10</str>
+                    <str name="rows">25</str>
                     <str name="f.subject_local_facet.facet.limit">11</str>
                     <str name="facet.query">acq_dt:[2022-10-24T00:00:00Z TO *]</str>
                     <str name="facet.query">acq_dt:[2022-09-30T00:00:00Z TO *]</str>
@@ -829,7 +829,7 @@
                     <str name="f.location_facet.facet.sort">index</str>
                     <str name="fq">source_facet:(NOT aspace_archival_object)</str>
                     <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
-                    <str name="rows">10</str>
+                    <str name="rows">25</str>
                     <str name="f.subject_local_facet.facet.limit">11</str>
                     <str name="facet.query">acq_dt:[2022-10-24T00:00:00Z TO *]</str>
                     <str name="facet.query">acq_dt:[2022-09-30T00:00:00Z TO *]</str>
@@ -871,7 +871,7 @@
                     <str name="f.location_facet.facet.sort">index</str>
                     <str name="fq">source_facet:(NOT aspace_archival_object)</str>
                     <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
-                    <str name="rows">10</str>
+                    <str name="rows">25</str>
                     <str name="f.subject_local_facet.facet.limit">11</str>
                     <str name="facet.query">acq_dt:[2022-10-24T00:00:00Z TO *]</str>
                     <str name="facet.query">acq_dt:[2022-09-30T00:00:00Z TO *]</str>
@@ -912,7 +912,7 @@
                     <str name="f.location_facet.facet.sort">index</str>
                     <str name="fq">source_facet:(NOT aspace_archival_object)</str>
                     <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
-                    <str name="rows">10</str>
+                    <str name="rows">25</str>
                     <str name="f.subject_local_facet.facet.limit">11</str>
                     <str name="facet.query">acq_dt:[2022-10-24T00:00:00Z TO *]</str>
                     <str name="facet.query">acq_dt:[2022-09-30T00:00:00Z TO *]</str>
@@ -953,7 +953,7 @@
                     <str name="f.location_facet.facet.sort">index</str>
                     <str name="fq">source_facet:(NOT aspace_archival_object)</str>
                     <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
-                    <str name="rows">10</str>
+                    <str name="rows">25</str>
                     <str name="f.subject_local_facet.facet.limit">11</str>
                     <str name="facet.query">acq_dt:[2022-10-24T00:00:00Z TO *]</str>
                     <str name="facet.query">acq_dt:[2022-09-30T00:00:00Z TO *]</str>
@@ -994,7 +994,7 @@
                     <str name="f.location_facet.facet.sort">index</str>
                     <str name="fq">source_facet:(NOT aspace_archival_object)</str>
                     <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
-                    <str name="rows">10</str>
+                    <str name="rows">25</str>
                     <str name="f.subject_local_facet.facet.limit">11</str>
                     <str name="facet.query">acq_dt:[2022-10-24T00:00:00Z TO *]</str>
                     <str name="facet.query">acq_dt:[2022-09-30T00:00:00Z TO *]</str>
@@ -1035,7 +1035,7 @@
                     <str name="f.location_facet.facet.sort">index</str>
                     <str name="fq">source_facet:(NOT aspace_archival_object)</str>
                     <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
-                    <str name="rows">10</str>
+                    <str name="rows">25</str>
                     <str name="f.subject_local_facet.facet.limit">11</str>
                     <str name="facet.query">acq_dt:[2022-10-24T00:00:00Z TO *]</str>
                     <str name="facet.query">acq_dt:[2022-09-30T00:00:00Z TO *]</str>
@@ -1076,7 +1076,7 @@
                     <str name="f.location_facet.facet.sort">index</str>
                     <str name="fq">source_facet:(NOT aspace_archival_object)</str>
                     <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
-                    <str name="rows">10</str>
+                    <str name="rows">25</str>
                     <str name="f.subject_local_facet.facet.limit">11</str>
                     <str name="facet.query">acq_dt:[2022-10-24T00:00:00Z TO *]</str>
                     <str name="facet.query">acq_dt:[2022-09-30T00:00:00Z TO *]</str>
@@ -1117,7 +1117,7 @@
                     <str name="f.location_facet.facet.sort">index</str>
                     <str name="fq">source_facet:(NOT aspace_archival_object)</str>
                     <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
-                    <str name="rows">10</str>
+                    <str name="rows">25</str>
                     <str name="f.subject_local_facet.facet.limit">11</str>
                     <str name="facet.query">acq_dt:[2022-10-24T00:00:00Z TO *]</str>
                     <str name="facet.query">acq_dt:[2022-09-30T00:00:00Z TO *]</str>
@@ -1158,7 +1158,7 @@
                     <str name="f.location_facet.facet.sort">index</str>
                     <str name="fq">source_facet:(NOT aspace_archival_object)</str>
                     <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
-                    <str name="rows">10</str>
+                    <str name="rows">25</str>
                     <str name="f.subject_local_facet.facet.limit">11</str>
                     <str name="facet.query">acq_dt:[2022-10-24T00:00:00Z TO *]</str>
                     <str name="facet.query">acq_dt:[2022-09-30T00:00:00Z TO *]</str>
@@ -1199,7 +1199,7 @@
                     <str name="f.location_facet.facet.sort">index</str>
                     <str name="fq">source_facet:(NOT aspace_archival_object)</str>
                     <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
-                    <str name="rows">10</str>
+                    <str name="rows">25</str>
                     <str name="f.subject_local_facet.facet.limit">11</str>
                     <str name="facet.query">acq_dt:[2022-10-24T00:00:00Z TO *]</str>
                     <str name="facet.query">acq_dt:[2022-09-30T00:00:00Z TO *]</str>
@@ -1240,7 +1240,7 @@
                     <str name="f.location_facet.facet.sort">index</str>
                     <str name="fq">source_facet:(NOT aspace_archival_object)</str>
                     <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
-                    <str name="rows">10</str>
+                    <str name="rows">25</str>
                     <str name="f.subject_local_facet.facet.limit">11</str>
                     <str name="facet.query">acq_dt:[2022-10-24T00:00:00Z TO *]</str>
                     <str name="facet.query">acq_dt:[2022-09-30T00:00:00Z TO *]</str>
@@ -1281,7 +1281,7 @@
                     <str name="f.location_facet.facet.sort">index</str>
                     <str name="fq">source_facet:(NOT aspace_archival_object)</str>
                     <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
-                    <str name="rows">10</str>
+                    <str name="rows">25</str>
                     <str name="f.subject_local_facet.facet.limit">11</str>
                     <str name="facet.query">acq_dt:[2022-10-24T00:00:00Z TO *]</str>
                     <str name="facet.query">acq_dt:[2022-09-30T00:00:00Z TO *]</str>
@@ -1322,7 +1322,7 @@
                     <str name="f.location_facet.facet.sort">index</str>
                     <str name="fq">source_facet:(NOT aspace_archival_object)</str>
                     <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
-                    <str name="rows">10</str>
+                    <str name="rows">25</str>
                     <str name="f.subject_local_facet.facet.limit">11</str>
                     <str name="facet.query">acq_dt:[2022-10-24T00:00:00Z TO *]</str>
                     <str name="facet.query">acq_dt:[2022-09-30T00:00:00Z TO *]</str>
@@ -1363,7 +1363,7 @@
                     <str name="f.location_facet.facet.sort">index</str>
                     <str name="fq">source_facet:(NOT aspace_archival_object)</str>
                     <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
-                    <str name="rows">10</str>
+                    <str name="rows">25</str>
                     <str name="f.subject_local_facet.facet.limit">11</str>
                     <str name="facet.query">acq_dt:[2022-10-24T00:00:00Z TO *]</str>
                     <str name="facet.query">acq_dt:[2022-09-30T00:00:00Z TO *]</str>
@@ -1404,7 +1404,7 @@
                     <str name="f.location_facet.facet.sort">index</str>
                     <str name="fq">source_facet:(NOT aspace_archival_object)</str>
                     <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
-                    <str name="rows">10</str>
+                    <str name="rows">25</str>
                     <str name="f.subject_local_facet.facet.limit">11</str>
                     <str name="facet.query">acq_dt:[2022-10-24T00:00:00Z TO *]</str>
                     <str name="facet.query">acq_dt:[2022-09-30T00:00:00Z TO *]</str>
