@@ -38,6 +38,12 @@
         </lst>
     </requestHandler>
 
+    <searchComponent name="elevator" class="solr.QueryElevationComponent" >
+        <str name="queryFieldType">elevate_field</str>
+        <str name="config-file">elevate.xml</str>
+        <str name="forceElevation">false</str>
+    </searchComponent>
+
     <requestDispatcher handleSelect="true">
         <requestParsers enableRemoteStreaming="true"
                         multipartUploadLimitInKB="2048000"/>
@@ -204,6 +210,8 @@
                 author_display,
                 author_vern_display,
                 author_facet,
+                archival_call_number_ss,
+                archival_date_ss,
                 collection_creator_ss,
                 container_display,
                 format,
@@ -309,6 +317,7 @@
           -->
         <arr name="last-components">
             <str>spellcheck</str>
+            <str>elevator</str>
         </arr>
 
     </requestHandler>
