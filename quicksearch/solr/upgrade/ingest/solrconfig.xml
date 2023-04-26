@@ -108,6 +108,8 @@
                 subtitle_txt_cjk^50000
                 title_addl_txt^5000
                 title_addl_txt_cjk^5000
+                alternative_title_txt
+                alternative_title_txt_cjk
                 subject_txt^750
                 author_txt^25000
                 author_addl_txt^25000
@@ -118,6 +120,9 @@
                 pub_name_txt_cjk^1000
                 text
                 text_copy_cjk
+                abstract_facet,
+                access_restrictions_txt
+
             </str>
             <str name="pf">
                 cjk^100001
@@ -128,6 +133,8 @@
                 subtitle_txt_cjk^500000
                 title_addl_txt^50000
                 title_addl_txt_cjk^50000
+                alternative_title_txt
+                alternative_title_txt_cjk
                 subject_txt^7500
                 subject_txt_cjk^7500
                 author_txt^250000
@@ -139,6 +146,10 @@
                 title_series_txt_cjk^1000
                 pub_place_txt_cjk^1000
                 pub_name_txt_cjk^1000
+                container_txt
+                ancestor_display_strings_txt
+                abstract_facet
+                access_restrictions_txt
             </str>
             <str name="author_qf">
                 author_txt^200
@@ -164,6 +175,8 @@
                 title_addl_txt_cjk^10000
                 title_series_txt^5000
                 title_series_txt_cjk^5000
+                alternative_title_txt
+                alternative_title_txt_cjk
             </str>
             <str name="title_pf">
                 title_starts_with^1000000
@@ -171,11 +184,14 @@
                 subtitle_txt^250000
                 title_addl_txt^100000
                 title_series_txt^50000
+                alternative_title_txt
+
                 <!-- cjk -->
                 title_txt_cjk^500000
                 subtitle_txt_cjk^250000
                 title_addl_txt_cjk^100000
                 title_series_txt_cjk^50000
+                alternative_title_txt_cjk
 
             </str>
             <str name="title_start_qf">
@@ -242,7 +258,13 @@
                 url_suppl_display,
                 dcs_uri_ss,
                 iiif_thumbnail_uri_ss,
-                iiifManifest_uri_ss
+                iiifManifest_uri_ss,
+                dcs_call_number_ss,
+                abstract_facet,
+                access_restrictions_txt,
+                right_statement_txt,
+                digitalization_note_txt,
+                extent_of_digitization_txt
             </str>
 
             <str name="facet">true</str>
@@ -366,6 +388,8 @@
                 subtitle_txt_cjk^50000
                 title_addl_txt^5000
                 title_addl_txt_cjk^5000
+                alternative_title_txt
+                alternative_title_txt_cjk
                 subject_txt^750
                 author_txt^25000
                 author_addl_txt^25000
@@ -378,6 +402,8 @@
                 text_copy_cjk
                 container_txt
                 ancestor_display_strings_txt
+                abstract_facet
+                access_restrictions_txt
             </str>
             <str name="pf">
                 cjk^100001
@@ -388,6 +414,8 @@
                 subtitle_txt_cjk^500000
                 title_addl_txt^50000
                 title_addl_txt_cjk^50000
+                alternative_title_txt
+                alternative_title_txt_cjk
                 subject_txt^7500
                 subject_txt_cjk^7500
                 author_txt^250000
@@ -401,6 +429,8 @@
                 pub_name_txt_cjk^1000
                 container_txt^10
                 ancestor_display_strings_txt^10
+                abstract_facet
+                access_restrictions_txt
             </str>
             <str name="author_qf">
                 author_txt^200
@@ -433,11 +463,13 @@
                 subtitle_txt^250000
                 title_addl_txt^100000
                 title_series_txt^50000
+                alternative_title_txt
                 <!-- cjk -->
                 title_txt_cjk^500000
                 subtitle_txt_cjk^250000
                 title_addl_txt_cjk^100000
                 title_series_txt_cjk^50000
+                alternative_title_txt_cjk
 
             </str>
             <str name="title_start_qf">
@@ -511,8 +543,13 @@
                 text_copy_cjk,
                 dcs_uri_ss,
                 iiif_thumbnail_uri_ss,
-                iiifManifest_uri_ss
-            </str>
+                iiifManifest_uri_ss,
+                dcs_call_number_ss,
+                abstract_facet,
+                access_restrictions_txt,
+                right_statement_txt,
+                digitalization_note_txt,
+                extent_of_digitization_txt
 
             <!--YUL 3/23/17 commented out facet fields copied from cul advanced search for reference-->
             <str name="facet">true</str>
