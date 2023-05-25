@@ -232,6 +232,7 @@
 
             <str name="q.alt">*:*</str>
             <str name="mm">2&lt;-1 5&lt;-2 6&lt;90%</str>
+            <str name="hl.method">unified</str>
 
             <!-- this qf and pf are used by default, if not otherwise specified by
                  client. The default blacklight_config will use these for the
@@ -260,6 +261,12 @@
                 pub_name_txt_cjk^1000
                 text
                 text_copy_cjk
+                title_hl
+                author_hl
+                container_hl
+                subject_hl       
+                description_hl
+                abstract_hl
             </str>
             <str name="pf">
                 cjk^100001
@@ -490,6 +497,7 @@
             <!--<str name="q.alt">*:*</str>-->
             <str name="df">text</str>
             <str name="mm">2&lt;-1 5&lt;-2 6&lt;90%</str>
+            <str name="hl.method">unified</str>
 
             <!-- this qf and pf are used by default, if not otherwise specified by
                  client. The default blacklight_config will use these for the
@@ -520,6 +528,12 @@
                 text_copy_cjk
                 container_txt
                 ancestor_display_strings_txt
+                title_hl
+                author_hl
+                container_hl
+                subject_hl       
+                description_hl
+                abstract_hl
             </str>
             <str name="pf">
                 cjk^100001
