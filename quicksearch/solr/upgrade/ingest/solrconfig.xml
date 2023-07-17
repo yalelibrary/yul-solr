@@ -126,8 +126,6 @@
                 title_hl
                 author_hl
                 container_hl
-                subject_name_hl
-                subject_topic_hl
                 date_hl
                 call_number_hl
                 access_hl
@@ -422,8 +420,6 @@
                 title_hl
                 author_hl
                 container_hl
-                subject_name_hl
-                subject_topic_hl
                 date_hl
                 call_number_hl
                 access_hl
