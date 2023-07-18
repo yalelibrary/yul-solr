@@ -128,7 +128,6 @@
                 container_hl
                 date_hl
                 call_number_hl
-                access_hl
                 description_hl
                 subject_name_hl
                 subject_topic_hl
@@ -421,7 +420,6 @@
                 container_hl
                 date_hl
                 call_number_hl
-                access_hl
                 description_hl
                 subject_name_hl
                 subject_topic_hl
