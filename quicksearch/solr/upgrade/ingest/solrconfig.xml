@@ -126,7 +126,7 @@
                 abstract_txt
                 description_txt
                 full_publisher_txt
-                access_restrictions_txt
+                access_restrictions_ss
                 title_hl
                 author_hl
                 container_hl
@@ -162,7 +162,7 @@
                 container_txt
                 ancestor_display_strings_txt
                 abstract_txt
-                access_restrictions_txt
+                description_txt
                 full_publisher_txt
             </str>
             <str name="author_qf">
@@ -265,22 +265,39 @@
                 subject_geo_facet,
                 subject_era_facet,
                 subject_local_facet,
+                subject_name_facet,
                 subtitle_display,
                 subtitle_vern_display,
                 url_fulltext_display,
                 url_munged_display,
                 url_suppl_display,
+                text_copy_cjk,
+                found_in_labels_ss,
+                found_in_uris_ss,
+                collection_creator_ss,
+                container_display,
+                archival_call_number,
+                archival_date,
                 dcs_uri_ss,
                 repository_facet,
                 description_ss,
                 iiif_thumbnail_uri_ss,
                 iiifManifest_uri_ss,
                 dcs_call_number_ss,
-                abstract_facet,
-                access_restrictions_txt,
+                abstract_txt,
+                access_restrictions_ss,
                 right_statement_txt,
                 digitalization_note_txt,
-                extent_of_digitization_txt
+                extent_of_digitization_txt,
+                extent_of_digitization_facet,
+                pub_date_sort,
+                repository_facet,
+                access_restrictions_facet,
+                genre_facet,
+                dcs_format_facet,
+                resource_type_facet,
+                creation_place_facet,
+                fullText_facet
             </str>
 
             <str name="facet">true</str>
@@ -458,7 +475,7 @@
                 pub_name_txt_cjk^1000
                 container_txt^10
                 ancestor_display_strings_txt^10
-                access_restrictions_txt
+                access_restrictions_ss
                 abstract_txt
                 description_txt
                 full_publisher_txt
@@ -566,12 +583,15 @@
                 subject_geo_facet,
                 subject_era_facet,
                 subject_local_facet,
+                subject_name_facet,
                 subtitle_display,
                 subtitle_vern_display,
                 url_fulltext_display,
                 url_munged_display,
                 url_suppl_display,
                 text_copy_cjk,
+                archival_date,
+                dcs_date_ss,
                 dcs_uri_ss,
                 repository_facet,
                 description_ss,
@@ -579,10 +599,18 @@
                 iiifManifest_uri_ss,
                 dcs_call_number_ss,
                 abstract_txt,
-                access_restrictions_txt,
+                access_restrictions_ss,
                 right_statement_txt,
                 digitalization_note_txt,
-                extent_of_digitization_txt
+                extent_of_digitization_txt,
+                repository_facet,
+                extent_of_digitization_facet,
+                access_restrictions_facet,
+                genre_facet,
+                dcs_format_facet,
+                resource_type_facet,
+                creation_place_facet,
+                fullText_facet
 
             <!--YUL 3/23/17 commented out facet fields copied from cul advanced search for reference-->
             <str name="facet">true</str>
