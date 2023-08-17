@@ -239,6 +239,7 @@
                 score,
                 author_display,
                 author_vern_display,
+                alternative_title_display,
                 author_facet,
                 archival_call_number_ss,
                 archival_date_ss,
@@ -286,9 +287,8 @@
                 dcs_call_number_ss,
                 abstract_txt,
                 access_restrictions_ss,
-                right_statement_txt,
-                digitalization_note_txt,
-                extent_of_digitization_txt,
+                right_statement_display,
+                digitization_note_display,
                 extent_of_digitization_facet,
                 pub_date_sort,
                 repository_facet,
@@ -297,7 +297,8 @@
                 dcs_format_facet,
                 resource_type_facet,
                 creation_place_facet,
-                fullText_facet
+                fullText_facet,
+                metadata_source_ss
             </str>
 
             <str name="facet">true</str>
@@ -600,9 +601,9 @@
                 dcs_call_number_ss,
                 abstract_txt,
                 access_restrictions_ss,
-                right_statement_txt,
-                digitalization_note_txt,
-                extent_of_digitization_txt,
+                right_statement_display,
+                digitization_note_display,
+                extent_of_digitization_facet,
                 repository_facet,
                 extent_of_digitization_facet,
                 access_restrictions_facet,
@@ -610,7 +611,8 @@
                 dcs_format_facet,
                 resource_type_facet,
                 creation_place_facet,
-                fullText_facet
+                fullText_facet,
+                metadata_source_ss
 
             <!--YUL 3/23/17 commented out facet fields copied from cul advanced search for reference-->
             <str name="facet">true</str>

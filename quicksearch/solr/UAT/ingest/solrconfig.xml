@@ -108,6 +108,8 @@
                 subtitle_txt_cjk^50000
                 title_addl_txt^5000
                 title_addl_txt_cjk^5000
+                alternative_title_txt
+                alternative_title_txt_cjk
                 subject_txt^750
                 author_txt^25000
                 author_addl_txt^25000
@@ -123,6 +125,18 @@
                 abstract_txt
                 description_txt
                 full_publisher_txt
+                title_hl
+                author_hl
+                container_hl
+                date_hl
+                call_number_hl
+                access_hl
+                description_hl
+                abstract_hl
+                subject_name_hl
+                subject_topic_hl
+                alternative_title_hl
+                publisher_hl
             </str>
             <str name="pf">
                 cjk^100001
@@ -174,6 +188,8 @@
                 title_addl_txt_cjk^10000
                 title_series_txt^5000
                 title_series_txt_cjk^5000
+                alternative_title_txt
+                alternative_title_txt_cjk
             </str>
             <str name="title_pf">
                 title_starts_with^1000000
@@ -181,11 +197,13 @@
                 subtitle_txt^250000
                 title_addl_txt^100000
                 title_series_txt^50000
+                alternative_title_txt
                 <!-- cjk -->
                 title_txt_cjk^500000
                 subtitle_txt_cjk^250000
                 title_addl_txt_cjk^100000
                 title_series_txt_cjk^50000
+                alternative_title_txt_cjk
 
             </str>
             <str name="title_start_qf">
@@ -217,10 +235,24 @@
                 id,
                 clio_id_display,
                 score,
+                cjk,
+                title_txt_cjk,
+                subject_txt_cjk,
+                subtitle_txt_cjk,
+                author_txt_cjk,
+                alternative_title_display,
+                title_series_txt_cjk,
+                pub_place_txt_cjk,
+                pub_name_txt_cjk,
+                subject_txt_cjk,
+                title_addl_txt_cjk,
+                alternative_title_txt_cjk
+                author_addl_txt_cjk,
                 author_display,
                 author_vern_display,
                 author_facet,
                 archival_call_number_ss,
+                alternative_title_display,
                 archival_date_ss,
                 collection_creator_ss,
                 container_display,
@@ -264,11 +296,19 @@
                 iiif_thumbnail_uri_ss,
                 iiifManifest_uri_ss,
                 dcs_call_number_ss,
-                abstract_txt,
                 access_restrictions_ss,
-                right_statement_txt,
-                digitalization_note_txt,
-                extent_of_digitization_txt
+                right_statement_display,
+                digitization_note_display,
+                extent_of_digitization_facet,
+                pub_date_sort,
+                repository_facet,
+                access_restrictions_facet,
+                genre_facet,
+                dcs_format_facet,
+                resource_type_facet,
+                creation_place_facet,
+                fullText_facet,
+                metadata_source_ss
             </str>
 
             <str name="facet">true</str>
@@ -392,6 +432,8 @@
                 subtitle_txt_cjk^50000
                 title_addl_txt^5000
                 title_addl_txt_cjk^5000
+                alternative_title_txt
+                alternative_title_txt_cjk
                 subject_txt^750
                 author_txt^25000
                 author_addl_txt^25000
@@ -407,6 +449,18 @@
                 abstract_txt
                 description_txt
                 full_publisher_txt
+                title_hl
+                author_hl
+                container_hl
+                date_hl
+                call_number_hl
+                access_hl
+                description_hl
+                abstract_hl
+                subject_name_hl
+                subject_topic_hl
+                alternative_title_hl
+                publisher_hl
             </str>
             <str name="pf">
                 cjk^100001
@@ -417,6 +471,8 @@
                 subtitle_txt_cjk^500000
                 title_addl_txt^50000
                 title_addl_txt_cjk^50000
+                alternative_title_txt
+                alternative_title_txt_cjk
                 subject_txt^7500
                 subject_txt_cjk^7500
                 author_txt^250000
@@ -458,6 +514,8 @@
                 title_addl_txt_cjk^10000
                 title_series_txt^5000
                 title_series_txt_cjk^5000
+                alternative_title_txt
+                alternative_title_txt_cjk
             </str>
             <str name="title_pf">
                 title_starts_with^1000000
@@ -465,11 +523,13 @@
                 subtitle_txt^250000
                 title_addl_txt^100000
                 title_series_txt^50000
+                alternative_title_txt
                 <!-- cjk -->
                 title_txt_cjk^500000
                 subtitle_txt_cjk^250000
                 title_addl_txt_cjk^100000
                 title_series_txt_cjk^50000
+                alternative_title_txt_cjk
 
             </str>
             <str name="title_start_qf">
@@ -505,6 +565,7 @@
                 subject_txt_cjk,
                 subtitle_txt_cjk,
                 author_txt_cjk,
+                alternative_title_display,
                 title_series_txt_cjk,
                 pub_place_txt_cjk,
                 pub_name_txt_cjk,
@@ -541,6 +602,10 @@
                 url_munged_display,
                 url_suppl_display,
                 text_copy_cjk,
+                found_in_labels_ss,
+                found_in_uris_ss,
+                collection_creator_ss,
+                container_display,
                 archival_date,
                 dcs_date_ss,
                 dcs_uri_ss,
@@ -549,11 +614,19 @@
                 iiif_thumbnail_uri_ss,
                 iiifManifest_uri_ss,
                 dcs_call_number_ss,
-                abstract_txt,
                 access_restrictions_ss,
-                right_statement_txt,
-                digitalization_note_txt,
-                extent_of_digitization_txt
+                right_statement_display,
+                digitization_note_display,
+                extent_of_digitization_facet,
+                pub_date_sort,
+                repository_facet,
+                access_restrictions_facet,
+                genre_facet,
+                dcs_format_facet,
+                resource_type_facet,
+                creation_place_facet,
+                fullText_facet,
+                metadata_source_ss
             </str>
 
             <!--YUL 3/23/17 commented out facet fields copied from cul advanced search for reference-->

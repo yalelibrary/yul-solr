@@ -38,6 +38,7 @@
 
    <field name="cjk" type="text_cjk" indexed="true" stored="true" multiValued="false"/>
    <dynamicField name="*_cjk" type="text_cjk"   indexed="true"  stored="true" multiValued="true"/>
+   <dynamicField name="*_hl" type="text_general" indexed="true" stored="true" multiValued="true"/>
 
 
    <dynamicField name="*_i"  type="int"    indexed="true"  stored="true"/>
