@@ -504,6 +504,8 @@
                 title_addl_txt_cjk^10000
                 title_series_txt^5000
                 title_series_txt_cjk^5000
+                alternative_title_txt
+                alternative_title_txt_cjk
             </str>
             <str name="title_pf">
                 title_starts_with^1000000
