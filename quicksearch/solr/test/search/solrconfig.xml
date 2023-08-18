@@ -272,7 +272,6 @@
                 container_hl
                 date_hl
                 call_number_hl
-                access_hl
                 description_hl
                 abstract_hl
                 subject_name_hl
