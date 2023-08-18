@@ -589,7 +589,7 @@
             found_in_uris_ss,
             collection_creator_ss,
             container_display,
-            archival_call_number,
+            archival_call_number_ss,
             archival_date_ss,
             dcs_date_ss,
             dcs_uri_ss,
