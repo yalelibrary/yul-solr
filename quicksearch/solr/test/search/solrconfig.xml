@@ -278,7 +278,6 @@
                 subject_topic_hl
                 alternative_title_hl
                 publisher_hl
-
             </str>
             <str name="pf">
                 cjk^100001
@@ -540,7 +539,6 @@
             <!--<str name="q.alt">*:*</str>-->
             <str name="df">text</str>
             <str name="mm">2&lt;-1 5&lt;-2 6&lt;90%</str>
-            <str name="hl.method">unified</str>
 
             <!-- this qf and pf are used by default, if not otherwise specified by
                  client. The default blacklight_config will use these for the
@@ -573,6 +571,9 @@
                 text_copy_cjk
                 container_txt
                 ancestor_display_strings_txt
+                abstract_txt
+                description_txt
+                full_publisher_txt
                 title_hl
                 author_hl
                 container_hl
@@ -689,6 +690,7 @@
                 subject_txt_cjk,
                 subtitle_txt_cjk,
                 author_txt_cjk,
+                alternative_title_display,
                 title_series_txt_cjk,
                 pub_place_txt_cjk,
                 pub_name_txt_cjk,
@@ -719,17 +721,18 @@
                 subject_geo_facet,
                 subject_era_facet,
                 subject_local_facet,
+                subject_name_facet,
                 subtitle_display,
                 subtitle_vern_display,
                 url_fulltext_display,
                 url_munged_display,
                 url_suppl_display,
-                found_in_labels_ss,
-                found_in_uris_ss,
+                archival_call_number_ss,
+                archival_date_ss,
                 collection_creator_ss,
                 container_display,
-                archival_call_number,
-                archival_date_ss,
+                found_in_labels_ss,
+                found_in_uris_ss,
                 dcs_date_ss,
                 dcs_uri_ss,
                 repository_facet,

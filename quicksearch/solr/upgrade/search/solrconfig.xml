@@ -232,7 +232,6 @@
 
             <str name="q.alt">*:*</str>
             <str name="mm">2&lt;-1 5&lt;-2 6&lt;90%</str>
-            <str name="hl.method">unified</str>
 
             <!-- this qf and pf are used by default, if not otherwise specified by
                  client. The default blacklight_config will use these for the
@@ -302,8 +301,8 @@
                 title_series_txt_cjk^1000
                 pub_place_txt_cjk^1000
                 pub_name_txt_cjk^1000
-                container_txt^10
-                ancestor_display_strings_txt^10
+                container_txt
+                ancestor_display_strings_txt
                 abstract_txt
                 description_txt
                 full_publisher_txt
@@ -380,10 +379,10 @@
                 id,
                 clio_id_display,
                 score,
+                alternative_title_display,
                 author_display,
                 author_vern_display,
                 author_facet,
-                alternative_title_display,
                 archival_call_number_ss,
                 archival_date_ss,
                 collection_creator_ss,
@@ -435,7 +434,6 @@
                 creation_place_facet,
                 fullText_facet,
                 metadata_source_ss
-
             </str>
 
             <str name="facet">true</str>
@@ -541,7 +539,6 @@
             <!--<str name="q.alt">*:*</str>-->
             <str name="df">text</str>
             <str name="mm">2&lt;-1 5&lt;-2 6&lt;90%</str>
-            <str name="hl.method">unified</str>
 
             <!-- this qf and pf are used by default, if not otherwise specified by
                  client. The default blacklight_config will use these for the
@@ -596,10 +593,10 @@
                 title_txt_cjk^100000
                 subtitle_txt^500000
                 subtitle_txt_cjk^500000
-                alternative_title_txt
-                alternative_title_txt_cjk
                 title_addl_txt^50000
                 title_addl_txt_cjk^50000
+                alternative_title_txt
+                alternative_title_txt_cjk
                 subject_txt^7500
                 subject_txt_cjk^7500
                 author_txt^250000
@@ -693,6 +690,7 @@
                 subject_txt_cjk,
                 subtitle_txt_cjk,
                 author_txt_cjk,
+                alternative_title_display,
                 title_series_txt_cjk,
                 pub_place_txt_cjk,
                 pub_name_txt_cjk,
@@ -701,7 +699,6 @@
                 author_addl_txt_cjk,
                 clio_id_display,
                 score,
-                alternative_title_display,
                 author_display,
                 author_vern_display,
                 author_facet,
@@ -730,10 +727,12 @@
                 url_fulltext_display,
                 url_munged_display,
                 url_suppl_display,
+                archival_call_number_ss,
+                archival_date_ss,
                 collection_creator_ss,
                 container_display,
-                archival_call_number,
-                archival_date_ss,
+                found_in_labels_ss,
+                found_in_uris_ss,
                 dcs_date_ss,
                 dcs_uri_ss,
                 repository_facet,
@@ -754,7 +753,6 @@
                 creation_place_facet,
                 fullText_facet,
                 metadata_source_ss
-
             </str>
 
             <!--YUL 3/23/17 commented out facet fields copied from cul advanced search for reference-->

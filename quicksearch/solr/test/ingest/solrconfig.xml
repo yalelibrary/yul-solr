@@ -90,7 +90,6 @@
 
             <str name="q.alt">*:*</str>
             <str name="mm">2&lt;-1 5&lt;-2 6&lt;90%</str>
-            <str name="hl.method">unified</str>
 
             <!-- this qf and pf are used by default, if not otherwise specified by
                  client. The default blacklight_config will use these for the
@@ -398,7 +397,6 @@
             <!--<str name="q.alt">*:*</str>-->
             <str name="df">text</str>
             <str name="mm">2&lt;-1 5&lt;-2 6&lt;90%</str>
-            <str name="hl.method">unified</str>
 
             <!-- this qf and pf are used by default, if not otherwise specified by
                  client. The default blacklight_config will use these for the
@@ -499,6 +497,8 @@
                 title_addl_txt_cjk^10000
                 title_series_txt^5000
                 title_series_txt_cjk^5000
+                alternative_title_txt
+                alternative_title_txt_cjk
             </str>
             <str name="title_pf">
                 title_starts_with^1000000
@@ -555,6 +555,7 @@
             title_addl_txt_cjk,
             author_addl_txt_cjk,
             clio_id_display,
+            alternative_title_display,
             score,
             author_display,
             author_vern_display,
@@ -610,6 +611,7 @@
             creation_place_facet,
             fullText_facet,
             metadata_source_ss
+            </str>
 
             <!--YUL 3/23/17 commented out facet fields copied from cul advanced search for reference-->
             <str name="facet">true</str>

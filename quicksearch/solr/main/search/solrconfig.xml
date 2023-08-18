@@ -577,12 +577,12 @@
                 title_hl
                 author_hl
                 container_hl
-                subject_name_hl
-                subject_topic_hl
                 date_hl
                 call_number_hl
                 description_hl
                 abstract_hl
+                subject_name_hl
+                subject_topic_hl
                 alternative_title_hl
                 publisher_hl
             </str>
@@ -744,6 +744,8 @@
                 right_statement_display,
                 digitization_note_display,
                 extent_of_digitization_facet,
+                pub_date_sort,
+                repository_facet,
                 access_restrictions_facet,
                 genre_facet,
                 dcs_format_facet,
