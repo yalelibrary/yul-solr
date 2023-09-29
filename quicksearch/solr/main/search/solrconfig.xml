@@ -31,10 +31,12 @@
     <schemaFactory class="ClassicIndexSchemaFactory"/>
     <!-- 1/14/2015 - BR: Added replication stanze -->
     <requestHandler name="/replication" class="solr.ReplicationHandler">
-        <lst name="master">
-            <str name="replicateAfter">commit</str>
-            <str name="replicateAfter">startup</str>
-            <str name="confFiles">solrconfig_slave.xml:solrconfig.xml</str>
+        <lst name="slave">
+            <str name="masterUrl">http://yul-qs-app2.library.yale.internal:8083/solr/clio-hydra</str>
+            <str name="pollInterval">00:01:00</str>
+            <str name="compression">internal</str>
+            <str name="httpConnTimeout">5000</str>
+            <str name="httpReadTimeout">10000</str>
         </lst>
     </requestHandler>
 
