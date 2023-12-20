@@ -1,29 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <config>
-    <luceneMatchVersion>LUCENE_40</luceneMatchVersion>
+    <luceneMatchVersion>9.4</luceneMatchVersion>
 
     <!-- 1/14/2015 - BR - Modified to include NRTCachingDirectoryFactory, caching, and prewarming -->
 
-    <directoryFactory name="DirectoryFactory"
+    <directoryFactory name="DirectoryFactory" class="${solr.directoryFactory:solr.NRTCachingDirectoryFactory}"/>
 
-                      class="${solr.directoryFactory:solr.NRTCachingDirectoryFactory}"/>
-
-
-    <lib dir="${solr.install.dir:../../../..}/dist/" regex="solr-cell-\d.*\.jar"/>
-
-    <lib dir="${solr.install.dir:../../../..}/contrib/clustering/lib/" regex=".*\.jar"/>
-    <lib dir="${solr.install.dir:../../../..}/dist/" regex="solr-clustering-\d.*\.jar"/>
-
-    <lib dir="${solr.install.dir:../../../..}/contrib/langid/lib/" regex=".*\.jar"/>
-    <lib dir="${solr.install.dir:../../../..}/dist/" regex="solr-langid-\d.*\.jar"/>
-
-    <lib dir="${solr.install.dir:../../../..}/contrib/velocity/lib" regex=".*\.jar"/>
-    <lib dir="${solr.install.dir:../../../..}/dist/" regex="solr-velocity-\d.*\.jar"/>
-    <lib dir="${solr.install.dir:../../../..}/dist/" regex="solr-ltr-\d.*\.jar"/>
-
-    <lib dir="${solr.install.dir:../../../..}/contrib/analysis-extras/lib/" regex=".*\.jar"/>
-    <lib dir="${solr.install.dir:../../../..}/contrib/analysis-extras/lucene-libs/" regex=".*\.jar"/>
-    <lib dir="${solr.install.dir:../../../..}/contrib/quicksearch/" regex=".*\.jar"/>
+    <lib dir="${solr.install.dir:../../../..}/contrib/quicksearch/" regex=".*\.jar" /> 
+    <lib dir="${solr.install.dir:../../../..}/modules/analysis-extras/lib/" regex=".*\.jar" />
 
 
     <dataDir>${solr.data.dir:}</dataDir>
