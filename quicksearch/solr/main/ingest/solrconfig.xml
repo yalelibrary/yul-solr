@@ -291,7 +291,10 @@
                 resource_type_facet,
                 creation_place_facet,
                 fullText_facet,
-                metadata_source_ss
+                metadata_source_ss,
+                holding_status_ss,
+                status_ss,
+                item_display
             </str>
 
             <str name="facet">true</str>
@@ -610,7 +613,10 @@
             resource_type_facet,
             creation_place_facet,
             fullText_facet,
-            metadata_source_ss
+            metadata_source_ss,
+            holding_status_ss,
+            status_ss,
+            item_display
             </str>
 
             <!--YUL 3/23/17 commented out facet fields copied from cul advanced search for reference-->
