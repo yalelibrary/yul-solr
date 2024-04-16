@@ -437,8 +437,7 @@
                 fullText_facet,
                 metadata_source_ss,
                 holding_status_ss,
-                status_ss,
-                item_display
+                old_id_ss
             </str>
 
             <str name="facet">true</str>
@@ -759,8 +758,7 @@
                 fullText_facet,
                 metadata_source_ss,
                 holding_status_ss,
-                status_ss,
-                item_display
+                old_id_ss
             </str>
 
             <!--YUL 3/23/17 commented out facet fields copied from cul advanced search for reference-->
